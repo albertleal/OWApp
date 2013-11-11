@@ -21,7 +21,7 @@ http://backbonejs.org/
 jquery-2.0.3
 http://jquery.com/
 
-jquery.touch
+jquery.touch-1.3.2
 http://jquerymobile.com/
 
 require-2.1.9

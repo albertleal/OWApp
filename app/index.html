@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="cache-control" content="no-store">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>My Sample WebApp</title>
 	<!--Libs and dependencies-->
-	<script data-main="js/static/main" src="js/lib/require/require-2.1.9.min.js"></script>
+	<script data-main="js/require-config" src="js/lib/require/require-2.1.9.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/lib/jquery/jquery-2.0.3.min.js"></script>
-	<script type="text/javascript" charset="utf-8" src="/js/lib/jquery/plugins/jquery.touch.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/static/Utils.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/static/config.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/static/app.js"></script>
-
-	<!--CSS files -->
+	<script type="text/javascript" charset="utf-8" src="/js/lib/jquery/plugins/jquery.touch-1.3.2.js"></script>
 	
+	<!--Minimal core-->
+	<script type="text/javascript" charset="utf-8" src="js/static/utils.js"></script>	
+
+	<!--Default Theme CSS files -->
+	<link href="themes/default/bootstrap-3.0.2/css/bootstrap.min.css" rel="stylesheet">
+	<script src="themes/default/bootstrap-3.0.2/js/bootstrap.min.js"></script>
+	<link href="themes/default/css/default.css" rel="stylesheet">
+	<!-- Load any future theme wieth the App init function-->
+
 </head>
-<body>
-	<h1>My Sample WebApp</h1>
+<body style="">
+
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header"></div>
+		</div>
+	</div>
+
+	<!-- Main jumbotron for a primary marketing message or call to action -->
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Hello, world!</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel lacinia mauris, sit amet dictum nibh.
+			</p>
+			<p>
+				<a class="btn btn-primary btn-lg" role="button">Learn more</a>
+			</p>
+		</div>
+	</div>
+	<hr>
+	<footer>
+		<p>&copy;OpenWebAPP 2013</p>
+	</footer>
+	<!-- /container -->
 </body>
 </html>
