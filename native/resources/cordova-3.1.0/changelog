@@ -1,0 +1,585 @@
+Cordova Commits from 3.0.0 -> 3.1.0
+
+cordova-android
+---
+e5b0157 Set VERSION to 3.1.0 (via coho)
+847b6fe Update JS snapshot to version 3.1.0 (via coho)
+133c2dc CB-4961: shell.js returns the full path on ls, rebuilding the full path isn't really needed
+5592765 [CB-4892] Fix create script only escaping the first space instead of all spaces. (cherry picked from commit 2d88a726b7bc541a1d8f65332318ec67462aae05)
+4441215 Fix update script to clobber cordova.js file (missing -f)
+734d4d3 Add missing copyright header for Whitelist.java. (cherry picked from commit b7ede8f9bae64b889faa75187a13702668b6aa38)
+d269b54 [CB-4832] Add 3.1.0 RELEASENOTES.md (cherry picked from commit 15f36cc19d5a285b8c7245045e8e1b0614a1e3a4)
+495ca45 Set VERSION to 3.1.0-rc1 (via coho)
+42a6e79 Update JS snapshot to version 3.1.0-rc1 (via coho)
+52d0a4f Updating Android Version to RC1
+1d1cdb5 Always have create script rebuild jar when on a dev version
+34bdef9 [CB-4817] Remove unused assets in project template.
+cad673f [CB-4817] Avoid generating unused files in create script
+7c446b2 [CB-3542] Convert update script to be node-based.
+1bd0f8f [CB-3542] Delete old ant-based bin/create.xml file.
+dd3c261 [CB-3542] Only update framework/ project when building the jar.
+70cc711 [CB-3542] Delete custom replaceInFile with shelljs.sed().
+485f2ee [CB-3542] Fail create script if a copy fails.
+129be6e [CB-3542] Delete extra message when check_reqs fails.
+c08b64e [CB-3542] Fix create script's check for whether cordova.jar exists.
+f4a0f55 Fail fast in create script if package name is not com.foo.bar.
+39d32bc CB-4620: Throwing this over the fence, since there is a problem actually in the wild here
+3351fdb Restore deleted classes (FileHelper, etc) and deprecate them instead.
+7be1f01 [CB-3542] Commit bin/node_modules so that it doesn't need to be npm installed.
+437daa3 [CB-4782] Convert ApplicationInfo.java -> appinfo.js
+3df09ea Remove out-of-date create script tests.
+483dd34 [CB-4769] Fix create script failure due to deleted version.js file
+2b0aa03 [CB-4766] Delete JSONUtils.java
+fc7261b [CB-4765] Move ExifHelper.java out of core (and into camera plugin)
+3200c50 [CB-4764] Delete DirectoryManager.java
+862a8ea [CB-4763] Delete FileHelper.java, Move getMimeType() into CordovaResourceApi.
+1bfcc92 Make version in version script easier to replace by coho
+80a09b8 [CB-4725] Add CordovaWebView.CORDOVA_VERSION constant
+5f7ce4b Reverting CB-3949: Squeay wheel gets the grease
+412d97f Incremeting version check for Android 4.3 API Level 18
+57bed98 Added commit 150cdfd, override arg for project template
+b1d8788 Fix for cli with new node scripts
+1bd4900 [CB-3542] rewrote cli tooling scripts in node
+e6812f1 Allow CordovaChromeClient subclasses access to CordovaInterface and CordovaWebView members
+f604988 Refactor CordovaActivity.init so that subclasses can easily override factory methods for webview objects
+150cdfd [CB-4652] Allow default project template to be overridden on create
+f42b34d CB-4318: We have docs, this doesn't need to be in the comments
+166b35b Tweak the online bridge to not send excess online events.
+121b74f [CB-4495] Modify start-emulator script to exit immediately on a fatal emulator error.
+5451320 Log WebView IOExceptions only when they are not 404s
+fe45b29 Use a higher threshold for slow exec() warnings when debugger is attached.
+4e1aa8a Fix data URI decoding in CordovaResourceApi
+fa366eb [CB-4140] Fix master branch cordova version to 3.1.0-dev
+e086a70 Remove plugin references in test project's config.xml
+53b8da8 [CB-4466] fixed jscript check_reqs to get target from project.properties
+c2c5f71 [CB-4463] Updated bin/check_reqs to looks for android-18 target.Also fixed an issue in unix version of script that would invoke the `android` command if an error occurred.
+2bdc849 CB-3819: Implemented Feature
+7cbe8f5 [CB-4013] Fixed loadUrlTimeoutValue preference.
+810df61 [CB-4410] Fixed @param mismatching
+5c38101 Upgrading project to Android 4.3
+b4236b9 [CB-4198] bin/create script should be better at handling non-word characters in activity name. Patched windows script as well.
+980c469 [CB-4198] bin/create should handle spaces in activity better.
+463c7b5 [CB-4096] Implemente new unified whitelist for android
+7c7230d [CB-4280] handle invalid bridge mode request
+b915aaf [CB-3384] Fix thread assertion when plugins remap URIs
+8202ab8 [CB-4133] Add main thread warning for plugins that run too long
+2fe6d14 We can remove the plugins tag now. Tested plugman, it's all good.
+7ee2853 Update cordova.js to latest (3.0.0-rc1) version
+6fe18ae [CB-3384] Use the ExposedJsApi to detect webCore thread instead of IceCreamCordovaWebViewClient.
+cordova-ios
+---
+bbc0463 Delete some incorrect RELEASENOTES.md entries
+25d0163 Set VERSION to 3.1.0 (via coho)
+b71bb2b Update JS snapshot to version 3.1.0 (via coho)
+1852a26 Added 3.1.0 Release Notes
+654815a [CB-3020] - HideKeyboardFormAccessoryBar and KeyboardShrinksView show white bar instead of removing it
+29f128b Updated VERSION file to 3.1.0-rc1
+6431b39 Updated internal version to 3.1.0
+f5d3c5a Updated cordova-js for 3.1.0-rc1
+4b823ba [CB-3020] HideKeyboardFormAccessoryBar and KeyboardShrinksView show white bar instead of removing it
+66e2399 [CB-4799] Add update script for iOS.
+cace580 [CB-4829] Xcode 5 simulated device names are different (and includes a new 64-bit device)
+5ee272e [CB-4827] iOS project/cordova/check_reqs script should be used by all the scripts
+133cac8 [CB-4530] iOS bin/check_reqs script should check for xcode 4.6 as minimum, and exit with code 2 if error occurs
+91d4512 [CB-4537] iOS bin/create script should copy check_reqs script into project/cordova folder
+dbd7f3d [CB-4801] Re-fix: float values should be integers - Add new iOS 7 properties for UIWebView in the config.xml <preferences>
+215da06 [CB-4803] Set new iOS 7 preferences for the UIWebView in CDVViewController
+14d79b4 [CB-4801] Add new iOS 7 properties for UIWebView in the config.xml <preferences>
+5733521 CordovaTests project was missing the CordovaLib dependency
+7a8c659 [CB-4687] - Fix Xcode 5 static analyzer issues
+70b5685 CDVViewController: Fix KeyboardShrinksView on iOS 7
+14cbc89 [CB-4469] Move copy-build-www-step.sh into scripts template
+af52daf [CB-4539] Cannot create CDVViewController in Storyboard
+0c63362 [CB-4654] Wherein it is discovered that cp is too smart for its own good
+a577edf [CB-4469] Move copy_www.sh to cordova/lib/copy-www-build-step.sh
+8ac56a1 [CB-4654] Exclude platform scripts from template directory; copy those separately
+4375681 [CB-4654] Allow default project template to be overridden on create
+609e882 Update iOS whitelist tests
+b0db1d9 Fix ARC issue in start page tests (critical for Xcode5)
+a71b2bd [CB-4706] Update compiler in CordovaLib.xcodeproj to "default compiler"
+4b94deb [CB-4707] Update compiler in default template xcodeproj to "default compiler"
+f7bc24c [CB-4689] Update default template xcodeproj to Xcode 5 project settings
+e7cee0d [CB-4688] CordovaLib.xcodeproj - update to Xcode 5 project settings
+dadd019 [CB-4691] Fix Xcode 5 warnings
+9e5f8c5 [CB-4567] fix issue: "Benchmarks" ->"AutoBench" crashed on iOS
+82cf293 [CB-4469] Flip executable bit for copy_www.sh
+ce766c6 [CB-4469] move copy resource script out of project file
+b545494 [CB-4486] Give iOS plugins the ability to override URL loading
+301de53 [CB-4408] Update cordova/emulate for new emulator build folder
+008a501 [Cb-4336] modify cordova/run and cordova/install-device scripts to use ios-deploy (npm)
+c87d1b0 [CB-4408] Modify cordova/build script to build for device (armv7/armv7s)
+5faf430 [CB-4409] Remove build artifact folder on cordova/clean
+96557e3 [CB-4405] Increase Xcode minimum version to 4.6 in cordova/* scripts
+3ca4b7a [CB-4334] modify cordova/emulate and cordova/run scripts help text for ios-sim (available as npm module)
+19cc5a5 [CB-4331] require ios-sim version 1.7 in command line scripts
+066753f [CB-4355] Localstorage plugin handles options incorrectly (the settings key is specified with upper case chars)
+9d20438 [CB-4358] Trim amount of frameworks (18) in default template to minimum needed (4)
+6ded3e8 [CB-4095] Unify whitelist implementations
+e2e0f4a [CB-4281] Remove Echo files from XCode project
+52d42b7 [CB-4281] Moving echo to a plugin in MobileSpec
+d411927 Updated cordova.js to 3.0.0
+9ccb128 [CB-4277] Revert deleting of <param name="onload" value="true" /> support
+5b49e14 Check the parent path exists in create so cp -r does not fail
+08b1765 [CB-3005] Add support for query parameters in StartPage url
+b4a3cd1 [CB-4133] iOS detection of plugins that run long on main thread
+814e9e0 [CB-4277] onload (boolean) attribute of config.xml param tag is ignored
+faba7fa Updated RELEASENOTES for 3.0.0
+cordova-blackberry
+---
+c60b4a4 Set VERSION to 3.1.0 (via coho)
+06d343b Update JS snapshot to version 3.1.0 (via coho)
+acc99de [CB-4880] release notes for 3.1.0
+8cb226b switching version to 3.1.0-dev on master
+dad4d15 CB-4876 removal of playbook implementation
+6f3dd91 CB-4875 updated readme with info on accessing last supported versions of BBOS and Playbook
+378d25b Adding missing license headers detected by apache rat
+815042d Syncing hello-world-app for 3.1 release
+006fcbe [CB-4812] Support for "default" value in the orientation preference
+fbe4de9 [CB-4762] Added a fix to the run script to error out when the IP is not found
+5334f10 [CB-4800] Workaround a Short File Name error on WinXP while maintaining fix for long paths
+1f955e9 [CB-4732] Removing buildId validation as it is no longer necessary
+42ed4bf [CB-4732] Re-writing build script to use async
+4baa515 Changing our HOME algorithm to match cordova-cli
+6001302 [CB-4785] Fixing --no-build flag for run command
+48a6475 [CB-4734] Added list of files to keep in chrome/lib
+29ba97c [CB-4734] Fixed issue where plugins are not added to frameworkModules
+d7d78a8 [CB-4730] [BlackBerry10] Updating init calls to work on Win 7 64     with long paths.
+e565e65 [BlackBerry10] Updated init to work on Windows 7 with long paths     with spaces
+9464372 Updating scripts to make init calls surrounded in quotes
+16ef0a0 [BlackBerry10] Fixing a bug with debugtoken generation without prompt
+011f842 [CB-4544] Adds a --query flag to query the user for their password when we need it  - Rewrite the run script for maintenance
+f81a762 [CB-4065] Remove lib files after frameworkModules.js is generated
+e9fa1f0 [CB-4564]Only alow .js files into frameworkModules
+f60a0cd [CB-4563] Migrated blackberry.app parameters to preferences
+75b8585 reverted config.js and event.js in unit tests due to bad overwrite
+b33f615 CB-4432 copyright notice change from Research in Motion to Apache
+7fd0094 [CB-4634] Updating the default app to match cordova-app-hello-world
+b6dfddf [CB-3798] Refactored all exec calls to use newly created utility exec function to avoid path with spaces errors
+ed53b6c [CB-4343] Remove parsing of project name from create script.
+9bf2a4c [CB-4575] Removing plugman chmod change from creation as we no longer use plugman within the framework
+b094165 [CB-4344] Auto-detect started simulator
+9a766e0 [CB-4342] Detect USB connected device
+0dbdf30 [CB-4076] Modified config-parser to default to the uri attribute
+cfee530 [CB-4259] Removing plugman and cordova/plugin script
+f102d3f [CB-4423] Warn when special characters are used in create script
+2936ea0 [CB-3798] Fixed CORDOVA_BBTOOLS env variable with spaces in path
+19267e2 [CB-4076] Added support for the origin attribute in config.xml
+3a53fb7 [CB-4508] Fixed failing unit tests
+f3f5d3d [CB3439] Introduces --web-inspector flag to enable webinspector for signed builds
+b6becd2 Fixed minor issues with paths with spaces
+a80747a Plugman version bump to 0.10.0
+b05381c [CB-4481] Removing permissions from template since not all apps should need them
+539749e [CB-3798] Update checkreqs for blackberry-debugtokenrequest
+7b93346 [CB-3798] Provide support for optional localized node/npm/bb-tools
+db0aa17 [CB-3798] Shelljs version bump 0.1.3
+dcdbed2 [CB-4346] changed utils genbarname function to return string as per ticket description, updated README.md section on create command
+a057f5b [CB-3174] removed <plugin> element deprecation notice
+76822a5 corrected playbook create tool usage
+1d8bc36 [CB-4302] update to *tagged* js
+26030fd [CB-4292] Update plugman to 0.9.10
+a5d4cbb [CB-4292] Remove remaining plugins
+a82ac6a [CB-4302] update of cordova.js for 3.0.0
+012c318 [CB-4287] Update BB10 Readme file
+7173f3d [CB-4287] Update BB10 Readme file
+d61540f [CB-4268] Add support for --device and --emulator to run script
+bc77387 [CB-4268] Rework util functions to support getting list of connected devices / emulators
+0dabef3 [CB-4272] Improve error messages related to debug tokens and signing
+cordova-windows
+---
+0ca3a25 Updated JS and versions files for windows8
+8c71425 minor code cleanup of create script
+7e7b497 added empty config.xml
+d2d5753 3.1.x updates
+cordova-wp8
+---
+0b539a8 dupe case-insensitive change for wp7
+e56c024 update js and version for 3.1.0
+9c1e062 pulled in and re-jiggered templates
+0d9a068 added case-insensitivity to check_reqs for wp8, just like @albanf did for wp7
+85245bf removed risky regex template version number replacement, and added XMLDOM versions (cherry picked from commit 7d4fda073ce35ecaa0003003fa85bc0b60bcb706)
+be0b01e updating VERSION and cordova.js for 3.1.0-rc1
+465eed5 Consolidated minor code diffs, these will be refactored shortly into one class used by both wp7+wp8
+7294c02 update to latest cordova.js in prep for 3.1.0rc1, not VERSION now has previous build + dev, ie 3.0.0dev
+8d17f2a [CB-4526] call clean before build ALWAYS
+7944b67 [CB-4807] Handle config.xml namespaces
+d62ca3a added hash removal to injected js for backbone/jQM routes
+7051baa CB-4421 Fix for XHR to local files, can now be relative to current page, as expected
+84c1395 CB-4421 Fix for XHR to local files, can now be relative to current page, as expected
+b76752e Fix for check_reqs error when msbuild did not exist in path
+cfb9d92 adding wp7 exec bits to check_reqs.
+9eda661 [CB-4350] the unix script needs to be executable to execute it.
+bd94737 [CB-4385] tooling fix for when path to project has spaces
+2e6fd63 Updated cordova.js snapshot
+52183ec [CB-3177][CB-3176] remove <plugin> support per deprecation policy.
+e7f495c Updated tooling (kindof) for 3.0.0 reversion
+4871713 Fix for check_reqs error when msbuild did not exist in path
+8c57805 adding wp7 exec bits to check_reqs.
+f1b9573 [CB-4350] the unix script needs to be executable to execute it.
+a88d8ad [CB-4385] tooling fix for when path to project has spaces
+4a733b0 Updated cordova.js snapshot
+bc6fcfb [CB-3177][CB-3176] remove <plugin> support per deprecation policy.
+144daf4 Moved beep.wav to dialogs plugin and updated .vstemplates for 3.0.0
+189618b [CB-4215] updated corodva js snapshot to 3.0.0rc1
+e869d36 removed plugins from wp7 framework project
+1c825a2 removed plugins from framework project
+1668b44 Updated cordova.js and removed wildcards from .csproj file
+116d4a6 Removed native DebugConsole code, now it's just javascript
+b7ecafe Remove verbose debug output of every command
+8fc5c37 Removed all plugin dependancies for 3.0.0 and updated cordova.js
+0432470 Removed AudioFormatsHelper from templates and added ConsoleHelper
+9441acf remove DebugConsole refs from templates
+57c6c3a removed DebugConsole and XHRPatching and DOMStorage from cordova.js. It is now part of native
+426a849 Added ConsoleHelper and removed DebugConsole from templates for wp7+8
+6e47087 removed DebugConsole permission
+c367fa8 adding console helper to wp8 lib project
+c179f56 Added console polyfill from native IBrowserDecorator
+cordova-firefoxos
+---
+129489d Set VERSION to 3.1.0 (via coho)
+b5e8cf4 Update JS snapshot to version 3.1.0 (via coho)
+a100714 updated to 3.1.0-rc1
+36c2544 added windows support for firefoxos
+cordova-docs
+---
+1a73cb7 [CB-4093] Update index page to remove "domain" from whitelist description
+2af28c5 [CB-4932] Update Android splashscreen in config doc.
+4776bec [CB-4932] Xref new section from main config.xml page
+b40432c [CB-4932] reference new section from home page
+80bd734 [CB-4932] new icon/splash config section
+7cf9fea CB-4093: Add note for iOS about 3.1.0 changes
+dbf16c9 CB-4093: Update whitelist documentation
+d0fdfe5 [iOS] Added 'Xcode 5 Issues' section to the Upgrading Guide for 3.0.0 -> 3.1.0
+4b231e9 [CB-4830] create docs dir for 3.1.0
+f46855b [CB-4962] Add upgrade instructions for wp8/wp7
+ae61b67 [CB-4962] Add upgrade instructions for Android
+36d5caf [CB-4802] Document new iOS 7 preferences for the UIWebView
+25d08f2 added upgrade portion for windows 8
+a3736ec added windows8 to cli guide
+4ebc97d added firefoxos
+026842a Update iOS Upgrading Guide for 3.1.0
+076f268 Adding splashscreen XML characters, deprecating stupid Java version
+3758743 [CB-4924] show how to retrieve plugin name
+ee7ab7c [CB-4916]: change examples to not use deprecated property
+67a1f66 [BlackBerry10] Update path information for 10.2 Native SDK
+e0976df [CB-1111] Update access element docs for bb10
+000a06e CB-4493 forgot about these references :-S
+70a4270 [CB-3820] sort pref listings by importance
+0c22d9b [CB-3820] tighten up text for iOS prefs
+7a976bd [CB-3820] assume you use EnableViewportScale to disable scaling, oddly enough
+1a18b54 [CB-3820] tighten up text for BB prefs
+2fb247f [CB-3820] tighten up text for Android prefs
+83c7f91 [CB-3820] is WebViewBounce superseded by DisallowOverscroll in cordova?
+61a4b97 [CB-3820] reimplemented changes accidentally overwritten
+fa58d41 [CB-3820] backgroundColor overrides page-wide CSS
+5b2beeb [CB-3820] query re scope of backgroundColor pref
+3f9c2de [CB-3820] assume auto-hide-splash-screen ios pref is PGB-only; superseded in CV by CamelCase variant
+15183ff [CB-3820] assume show-splash-screen-spinner  ios pref is PGB-only; superseded in CV by CamelCase variant
+1ea2cb4 [CB-3820] assume exit-on-suspend ios pref is PGB-only
+3b415ec [CB-3820] assume detect-data-types pref is PGB-only
+13d9351 [CB-3820] assume ios-statusbarstyle pref is PGB-only
+2d08362 [CB-3820] stay-in-webview is deprecated & PGB-only
+2b97ba3 [CB-3820] assume prerendered-icon pref is PGB-only
+5ce04a3 [CB-3820] assume webviewbounce pref is PGB-only; superseded in CV by DisallowOverscroll
+3b97a02 [CB-3820] assume target-device pref is PGB-only
+113fe1f [CB-3820] not sure what ShowSplashScreenSpinner refers to, but not important
+d967edc [CB-3820] yes, cordova webviews support the viewport metatag
+b734df7 [CB-3820] rm deprecated EnableLocation; no way to use CLI for workaround
+2e51e2a [CB-3820] clarify KeyboardShrinksView; autoplay no longer an issue
+6682f62 assertion: <a target='_blank'> opens inAppBrowser
+dd96e2b [CB-3820] minor config.xml edits
+14db3bf [CB-3820] no custom URL schemes iOS pref in COrdova
+ac9f67d [CB-3820] different set of HideKeyboardFormAccessoryBar values for BB
+914ea8f [CB-3820] minor change to HideKeyboardFormAccessoryBar
+7243e18 [CB-3820] tighten up PopupBlocker
+3b2600a [CB-3820] tighten up childBrowser text
+ef59b1c [CB-3820] no disable-cursor pref in BB10
+474286f [CB-3820] rm PGB-only Android compile prefs
+087cabc [CB-3820] describe effect DisallowOverscroll prevents
+d23e039 [CB-3820] KeepRunning keeps app running after pause event
+7ba945e [CB-3820] clarify defaults for LoadUrlTimeoutValue
+71d49e6 [CB-3820] clarify when ErrorUrl applies
+46c6deb [CB-3820] removed deprecated UseBrowserHistory pref
+26615ea [CB-3820] PGB's splash-screen-duration => CV's SplashScreenDelay
+fba8aa9 [CB-3820] rm PGB-specific icon/splash content
+156d34b [CB-3820] rm PGB-specific content
+9df47dc [CB-3820] correction: icon/splash mechanism is PGB-only
+f885c0c [CB-3820] query re loadingDialog & loadingPageDialog usage not important
+ab7ecda [CB-3820] clarify MediaPlaybackRequiresUserAction's effective scope
+26e0f82 [CB-3820] function of TopActivityIndicator is now clear
+2d8e805 [CB-3820] whether HideKeyboardFormAccessoryBar applies to >1 input matters little
+5f988bd [CB-3820] clarify scaope of current page: non-platform-unique content
+5b9579c [CB-3820] HideKeyboardFormAccessoryBar is for iOS & BB
+11627d8 strip potentially buggy nested XML comments
+d151efa [CB-3820] DisallowOverscroll concerns rubber-band, not glow
+bc91e00 [CB-3820] AutoHideSplashScreen is iOS only
+cb969a3 [CB-3820] resolve discrepancy in BB's orientation values
+d4adac5 [CB-3820] BackgroundColor works the same for Android/BB
+bfe1370 [CB-4881] Update plugin to feature in plugin spec for edge.
+fcda892 [CB-4881] Change plugin to feature
+027c585 3.0 to 3.1 upgrading guide
+2bb27cf Update README.md for simpler install instructions.
+348bc00 [CB-3962] add to stylesheet
+57aeef0 [CB-3962] 'the FOO file', not 'the file FOO'
+d3059c3 [CB-3962] directory, not folder
+216561a [CB-3962] standardize 'splash screen'
+0d03ee8 CB-4493 adding docs for installation from registry
+5265f70 [CB-4619] Add splashscreen instructions for BlackBerry10
+d51f32b [CB-4787] InAppBrowser can't access Cordova APIs
+0a8fd70 keep hidden WebOS content in for now to better track it
+8ab082c conolidate new section for non-global, multiplatform prefs
+2ede92c link to WP icon/splash content
+d439b7f new icon/splash content for WP
+8a360f6 global icon/splash content; more queries; custom URLs in iOS
+02fd21e unrelated: removed empty stub for firefoxOS config
+abd999e Using BB10 config page, vanilla BB config is minimal
+ac90b22 rewrite global icon config content
+5c7fc60 rewrite platform-specific icon/splash content
+49b93d2 move PGB's icon/splash content to platform-specific config
+5e52130 gather queries
+71d8936 non-default preference values; light edits
+6dbf38e bootstrap sample preference code
+1b7c1d1 cleanup intros to plat-specific config.xml
+0820ebc stage PGBuild content for platforms' config.xml
+6e61648 rename section as 'The config.xml File'
+c5d081d rewrite config.xml ref
+a81b69f Remove unused korean language files.
+11fba37 Remove German and Russian config.json~
+000edf9 Russian headers were not translated, fixed, now links should work
+a259efa [CB-4412] a workaround is being found to correct the issue, currently being treated as a documentation issue
+7509603 [CB-3961] Fix nonfunctioning B-head links for compatibility table.
+2b48a13 Russian headers were not translated, fixed, now links should work
+9acecfe Added German and Russian languages
+240a100 Added German and Russian languages
+ba7793a CB-4784 Fixing links by consistently translating headings. Code fixes for ios plugin.md
+b4e726e CB-4784 Fixing links by consistently translating headings. Code fixes for ios plugin.md
+481bb6e CB-4784 Fixing links by consistently translating headings
+e7168dd Move Japanese to docs/ja and Korean to docs/ko.
+a5d9ca8 Update translations from Crowdin.
+cdc2bf4 Sync with Crowdin 9/9 code updates
+c454848 Synchronization with Crowdin
+49265e0 Synchronization with Crowdin
+42992c0 note cameraDirection bug in Android
+121aa69 Synchronization with Crowdin
+1adb95c Synchronization with Crowdin
+d9c8619 Delete config.json~
+c79fae6 Delete config.json~
+6c591a9 Delete config.json~
+11f9fbe Synchronization with Crowdin
+bcbde0f Synchronization with Crowdin
+874ce5d Synchronization with Crowdin
+8b1ad9d [CB-4588] added square brackets to default value documentation
+875c8fe Delete rc versions of docs
+064d57e [CB-4736] documentation for the requestFileSystem function. Also addresses CB-4617
+80df881 [CB-4648] corrected error callback parameter names
+87c6d9b [CB-4644] updated file reader section headings to be more consistent with rest of docs
+4c962ee [CB-4588] updated function parameter description to button labels as array of strings
+15ee26d [CB-4588] updated button labels example code to use array syntax, from deprecated comma separated string syntax
+2ba0b3f [CB-4625] lower case the w3c reference to avoid match and replace
+992e915 Add edge for Spanish, French, and Chinese.
+389c22d Delete config.json~
+6140c30 Delete index.md~
+fdd2c37 Sync with Crowdin aug 30
+c02551a Synchronization with Crowdin
+9854fb1 [CB-4036] - updated docs on engine tags
+fcd56a4 [CB-4629] changed parameter name in callback to reflect returned object
+c40aec7 [CB-4630] adjusted parameter name in callback to reflect returned object
+dda7120 Added Linux hint for markdown
+7cec633 CB-4353: Updating documentation
+f792d76 Removed config.xml docs for 3.0.0.
+95747c1 Update BlackBerry10 Configuration code tags.
+6ee184d Link BlackBerry 10 Configuration in edge and 3.0.0.
+48ffb2c Mirror BlackBerry 10 Configuration to edge.
+4c355e1 Added config.xml docs for preferences
+76ef2fb mark headings inline to make it easier to grep & such
+d3ec7fe [doc] Mirror edge to 3.0.0.
+b77b91d bold instead of inline quotes
+e0a1576 CW for ; fix e.g./i.e.
+bd74aab Added information for file-transfer plugin
+39c758e Update README.md formatting for Adding a Language.
+7079d01 Add crowdin translation information to cordova-docs project
+e289014 [CB-3815] minor: no parens needed within tbl
+40df1e8 [doc] Update 3.0.0 from the edge docs.
+393a8dc minor: clarify CLI stubs
+9219026 minor: use CLI stubs in column headers
+8d7115d [CB-3616] Document InAppBrowser clearcache and clearallcache options
+4494a93 Noticed "Paramters" was missing an 'e'. Quick fix
+1f2851b Mirror the WP8 grammar patch to 3.0.0.
+cf8c953 Minor updates to tools.md docs. "Built" should be "Build"
+2d931bd Fixed a little typo while looking for some details about CLI
+cefd823 win8 supports splashscreen
+9c8d55f Missing space between two words
+3fb6fea Update 3.0.0 from edge directory.
+932e8c6 cordova create "Hello World" -> "HelloWorld"
+64fee82 Set nokogiri version to 1.5.9
+96a3bc7 Restore filetransfer.md to remove redundant code.
+99dcf84 [CB-3815] win8 does not support inAppBrowser
+2a4ec33 [CB-3815] partial storage support (localStorage only) for wp7/8
+bdd712a [CB-3815] bb supports inappbrowser?; fix wp refs
+7bc686b [CB-3815] wp7 & wp8 support splashscreen
+430591c [CB-3815] bb10 supports splashscreen
+9aee17a [CB-3815] bb10 supports compass
+44a2925 [CB-3815] only bb10 works with CLI
+217c135 [CB-3815] rm notes about no need for platform config; linked issue to overview tbl
+2d334ba [CB-3815] fix links to cli/webview/plugin topics from overview tbl
+a0b0b39 [CB-3815] link to webview/plugin platform doc from overview tbl
+d325ca9 [CB-3962] plug-in => plugin
+2c75960 fix stray xref
+e48fb08 [CB-3815] partial File support for wp7/8; no FileTransfer
+1b98573 [CB-3815] wp8 supports plugins
+a1b6193 [CB-3815] wp7 & wp8 support splashscreen
+5e782bc Fix link to CordovaPlugin.java in the Android plugin guide
+057d99f fix imports in android plugin example
+bf41ae2 Fix incorrect indentations in file examples.
+7171829 CB-3762: change prompt default to empty string
+64e56d4 Removed "Upgrading Guides" from homepage
+810182c [CB-3962] remove gratuitous em dashes
+8f334ec [CB-3962] bullet lists for non-procedures
+e6efa33 [CB-3822] merge extra 'setup new project' section in older BB
+0b3e0b7 [CB-3962] no ( extra space in parens )
+fc6d165 [CB-3815] bb10 supports compass
+65e1372 [CB-4347 CB-3962 CB-3822] minor stylesheet fixes & reformat
+2fa779a [CB-3962] no (s) necessary for plural
+bd38519 [CB-3962] monospace for inline commands
+89a6b5a [CB-3816] doc -v flag for simple version nimber
+50774b7 [CB-3815] correct API support for BB10 in compat tbl
+10c920e [CB-3962] subdirectory, not sub-directory
+462130b [CB-3815] add tizen to compat tbl
+e579c05 [CB-3815] SDK support is implicit; rm from compat tbl
+4ee71b8 [CB-3815] remove PhoneGap Build from Cordova's compat tbl
+02e7000 [CB-3815] in compat tbl, NO CLI support for win8
+7db07ce [CB-4459] Added some plugin.xml documentation to windows phone plugin guide
+47a8a94 [CB-4293] Improve documentation for ios native plugin classes, esp. w.r.t. onload parameter.
+83bce5d [CB-4454] Android org.apache.cordova.api -> org.apache.cordova
+140c192 updating plugin spec with discovery elements.
+881d8dc [CB-3818] enable access to battery events; other events enabled by default?
+0929908 [CB-3818] clarify diff storage specs; no plugin access
+8cb8b7c [CB-3818] collapse unnecessary vertical space
+7a7599c [CB-3818] boost indent for syntax to appear in block
+cd19d2b [CB-3818] fix bad config file formatting
+e5acb7a [CB-3816] 'npm update' refreshes cordova , not the app
+16bc6ab [CB-3816] create command takes time; -d flag
+49ff00a [CB-1863] Fix filetransfer.abort() example having callbacks.
+dfe7d6c [CB-4347] Fix merge issues in bb10 platform guide
+34f9eb6 inline fmt for default values
+b53bf55 [CB-3816] allow more xrefs to APIs in 'plugin add' xection
+a26096b minor fmt changes to plugman spec doc
+93d9410 [CB-4379] replace plugin tag w/feature in guide content, rm plugins tag
+7e5cc86 [CB-3962] fix inline text in upgrading sections; add more vertical space in listings
+1904513 [CB-4379] plugin => feature; rm plugins tag
+c9c4c06 [CB-4379] plugin becomes feature when there's no value param?
+7b8a92b [CB-4379] feature tag syntax replaces plugin
+857cf3d [CB-4379 CB-3818] specify CLI interface to API features
+357c3a3 Fixing mis-spelling in Android Plugin guide
+2a6610a [CB-4347] Fix incorrect syntax for release build
+35c9b40 [CB-4347] Restore/tweak lost improvements for BB10 platform guide
+e5ab1b5 [CB-4402] Fix an an issue in filereader.md:"deviceready" event is never fired!
+dd818b8 [CB-4386] changed ios platform guide to add ios (used to be add android)
+124cc4a [CB-3816] Fix formatting issues in guide/cli/index.md
+94bdce9 [CB-4389] Update examples to use cordova.js instead of cordova-3.0.0.js
+e1391cc [CB-3816] no space in 'Hello World' until other bug gets fixed (part 2)
+2a5b0f0 [CB-3816] no space in 'Hello World' until other bug gets fixed
+db19cf2 [CB-3816] corrected 'merges' content; mirrors src tree, doesn't map files in flat dir
+636109a [CB-3816] clarify 3.0's different upgrade approach
+a61dbbb [CB-3816] stupid little edit
+e1f4b80 [CB-3816] doc CLI's 'merges' feature
+3d9c8c0 [CB-3816 CB-4343] HelloWorld => hello, to avoid confusion w/project name
+dc47477 [CB-3816] add 'run' command
+bd91cb7 [CB-3827] remove 'Upgrading Guides' from home page to fix Xref glitch; no longer matches any standalone top-level content
+06746e7 [CB-3829] repaired many links referencing CLI section
+e84da58 [CB-3962] use &rarr; arrow entity to indicate nesting
+8a37ba3 [CB-3820] add CLI to config.xml discussion
+e73f0d5 [CB-3820] remove dead links to nonexistent platform-specific config pages
+f28dd9b [CB-3601] added doc note on npm bootstrap failure when running create command
+4a7d154 [CB-4381] expanded create documentation to include package name and app name arguments
+9579e53 [CB-4322] fixed cli doc usage wrt blackberry platform name (blackberry10)
+b00c364 Version 3.0.0
+3f8f7dc fixed reference for Using Plugman to Manage Plugins
+9982d9a [CB-3827] no more standalone 'Upgrading Guides', so remove this tree
+aed606e [CB-3827] move former 'Project Settings' to new top-level config_ref tree
+bdfd31e [CB-3827] new 'appdev' tree contains whitelist & privacy topics
+47734e9 [CB-3827] new 'hybrid' tree contains webview & plugins exposition
+1012ba0 [CB-3827] move plugin spec & plugman doc to new top-level plugin_ref dir
+a85a9d6 [CB-4312] added blackberry10 2.9.0 to 3.0.0 upgrade guide
+7775525 Android Upgrade Guide for 3.0.
+cordova-mobile-spec
+---
+a7cebd5 Set VERSION to 3.1.0 (via coho)
+ace274f CB-4894 handle correctly when geolocation not available
+00669d3 CB 4878 - media tests should wait for file load
+726758b CB4662, CB4879 cleanup errors in file tests
+d03db72 [CB-4857] Fix plugin id of dependent plugin (AudioHandler->media) (cherry picked from commit 1e1f6d343e76947cb99fc471dae09137a6227114)
+a60c880 Set VERSION to 3.1.0-rc1 (via coho)
+9f8ca3e [CB-4488] - refactored manual capture test
+bf27227 [CB-4488] - added some manual capture tests
+06f0142 Update setup instructions.
+ab9ba6a added tests for hash routes like #some/path and ./index.html
+fdf6568 added missing test page, only run windows phone tests on windows phone
+376416a Add backButton for autobench.html
+97b393b [CB-4568] Disable pop-up messages when running test "XHR to within-package 11kb asset."
+4b129f7 added tests for using XHR to load local files
+ed09c21 Add globalization back to autotest's All page.
+15e85b4 Fix location manual test to work with 3.0
+9deea99 [CB-3616] Change option name to "clearcache" to match original proposal
+e307067 [CB-3616] Add manual tests for InAppBrowser cache-clearing
+2393328 Fix exec benchmark to use correct "echo" symbol.
+4a403bc Work around CLI failing during createmobilespec.sh due to EMFILE on osx
+d6240a9 [CB-4473] submit Android Bridge performance results
+f5c0a54 [CB-4281] Adding echo plugin after breakout
+94f1514 [CB-4279] Bridge test now generic and tests available modes
+e064f50 Add missing license header to config.xml
+270bfe7 Add script to create a mobilespec project using local repos.
+3296c31 [CB-4264] Fixed a DirectoryReader test.
+cordova-js
+---
+1517b70 Set VERSION to 3.1.0 (via coho)
+07a5046 [CB-4942] [BlackBerry10]  deviceready is never fired     - Fix typo event.toLowerCase to type.type.toLowerCase     - Added eventListener for webworksReady to allow nativeReady to fire
+8c1ba66 Add RELEASENOTES.md for 3.1.0 (cherry picked from commit 45b50575230191d3251e8f226d2403a0fb90353b)
+7e798f2 Change build stamp again by having it use only VERSION file on master branch
+968f501 Fix packager to not add commit hash when creating a tagged version
+0d70465 Set VERSION to 3.1.0-rc1 (via coho)
+fbb4342 [CB-4761] Add cordova.platformId property
+ed1894d removed unnessary console.log
+1b208a6 updated ffos to use win8 style commandProxy
+6140e16 [CB-4149] Read version from VERSION when there is no .git/
+d6603c9 override init.js in the firefoxos platform for navigator fix, other bugfixes
+6866193 add firefoxos to gruntfile
+01119a9 platform.js
+0bc7da8 implement exec for firefoxos
+e2942e1 [all] [CB-4725] Export cordova version as "cordova.version"
+0ab1d2b Revert "[android] Don't catch exceptions wihtin the bridge since the browser does better logging of them when uncaught."
+8937f29 [android] Don't catch exceptions wihtin the bridge since the browser does better logging of them when uncaught.
+3be32a3 override init.js in the firefoxos platform for navigator fix, other bugfixes
+c8a0313 add firefoxos to gruntfile
+db0e689 platform.js
+7d5f6f6 [android] Move non-plugin files out of plugins/ subdirectory.
+1be2876 [android] Tweak the online bridge to tell native when an event has happened.
+6da628d [windowsphone] Use platform.bootstrap instead of platform.initialize for start-up logic.
+732c9e9 [win8] Move code from bootstrap-windows8.js into windows8/platform.js
+2e988b0 [test] Move code from bootstrap-test.js into test/platform.js
+c445923 [ios] Move code from bootstrap-ios.js into ios/platform.js
+08da18a [bb10] Move code from bootstrap-blackberry10.js into blackberry10/platform.js
+5965f92 [android] Move code from bootstrap-android.js into android/platform.js
+f1d3b0b Move bootstrap.js logic into a proper module "init.js"
+6e4bd92 [CB-4418] Delete loadMatchingModules() and move modulemapping call into bootstrap.js (from platform.js)
+d82ed34 [CB-4418] Remove final symbols.js file by folding it into bootstrap.
+0df3426 [all] Make pluginloader call a callback instead of firing a channel.
+c7839ae [win8] Move commandProxy.js into windows8/
+0ec3a5f [CB-4428] Delete Android storage plugin from cordova-js
+b248abf [all] Move some start-up logic from cordova.js -> bootstrap.js
+853a5fc [CB-4419] Remove non-CLI bootstrap files from cordova-js.
+ad72345 [CB-4419] Remove non-CLI platforms from cordova-js.
+ee2c1d2 Make base64 tests work in browser as well as Node
+45baa2c Change Gruntfile to auto-build before running tests
+2ec92f7 [CB-4420] Add a helper function for resolving relative URLs.
+da41506 [Windows8] remove all plugins
+d716e31 jshint cleanup (sorry im ocd)
+6bff51e [CB-4281] Moving echo to a plugin in mobilespec
+ab2cb2c [CB-4187] Fix the fix for start-up when no plugins are installed.
+f947df1 Fix grunt tests by deleting plugin-related and legacy BB tests
+50f8dbb [CB-4004] Fix Android JS bridge break caused by bad rebase before 5ba835c
+cordova-app-hello-world
+---
+5683220 Set VERSION to 3.1.0 (via coho)
+66eab86 Set VERSION to 3.1.0-rc1 (via coho)
+ddf57f2 [CB-4814] Add note in app-hello-world index.html regarding viewport issue in iOS 7
+e93f49c [CB-4634][BlackBerry10] Adding resources for BlackBerry 10

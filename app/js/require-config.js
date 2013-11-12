@@ -16,10 +16,13 @@ require.config({
         session : '/js/static/session',
         templates : '/templates',
         themes : '/themes',
+        core : 'core-init',
         OWASession : '/js/plugins/default/OWASession',
         OWAStorage : '/js/plugins/default/OWAStorage',
     }
 });
-require(["app"], function(App) {
-    App.init();
+
+var OWACore;
+require(["core"], function(Core) {
+    OWACore = Core;
 });
