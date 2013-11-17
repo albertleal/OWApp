@@ -5,8 +5,8 @@ define([], function() {
 	};
 	__CONFIG.prototype = {
 		init : function(){
-			Utils.log.isEnabled = this.isLogEnabled;
-			Utils.log.owa.write('Config init');
+			OWAUtils.log.isEnabled = this.isLogEnabled;
+			OWAUtils.log.owa.write('Config init');
 		}
 	};
 	return new __CONFIG();

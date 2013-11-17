@@ -1,10 +1,12 @@
 define(["config","session","device"], function(Config, Session, Device) {
 	__APP= function(){
-		this.mobileOS = "";
+		this.Config = Config;
+		this.Device = Device;
+		this.Session = Session;
 	};
 	__APP.prototype = {
 		init: function(){
-			Utils.log.owa.write('App init');
+			OWAUtils.log.owa.write('App init');
 			Device.init();
 			Config.init();
 			Session.init();

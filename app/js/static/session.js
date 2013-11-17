@@ -4,7 +4,7 @@ define(["OWASession"], function(OWASession) {
 	};
 	__SESSION.prototype = {
 		init: function(){
-			Utils.log.owa.write('Session init');
+			OWAUtils.log.owa.write('Session init');
 			OWASession.init();
 		},
 		checkCredentials : function(credentials){

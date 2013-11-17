@@ -4,11 +4,11 @@ define([ 'OWAStorage'],function(OWAStorage) {
 	};
 	__OWASession.prototype = {
 		init : function(){
-			Utils.log.owa.write('OWASession init');
+			OWAUtils.log.owa.write('OWASession init');
 		},
 		checkCredentials : function(credentials) {
-			Utils.log.owa.write('OWASession checkCredentials');
-			Utils.log.owa.write(credentials);
+			OWAUtils.log.owa.write('OWASession checkCredentials');
+			OWAUtils.log.owa.write(credentials);
 		}
 	};
 	return new __OWASession();
