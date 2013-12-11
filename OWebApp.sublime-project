@@ -2,7 +2,7 @@
 	"folders":
 	[
 		{
-			"path": "/Users/albertlealgibert/GIT/WeappEngine/",
+			"path": "~/GIT/OWAPP/",
 			"folder_exclude_patterns": ["lib", ".sass-cache", "bootstrap-3.0.2","css"],
 			"file_exclude_patterns": [".gitignore", "OWebApp.sublime-workspace"]
 

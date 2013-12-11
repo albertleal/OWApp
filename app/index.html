@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head manifest="manifest.mf">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
 
 	<title>My Sample WebApp</title>
-	<!--Libs and dependencies-->
-	<script data-main="js/require-config" src="js/lib/require/require-2.1.9.min.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/lib/jquery/jquery-2.0.3.min.js"></script>
-	<script type="text/javascript" charset="utf-8" src="/js/lib/jquery/plugins/jquery.touch-1.3.2.js"></script>
 	<!--Default Theme CSS files -->
 	<link href="themes/default/bootstrap-3.0.2/css/bootstrap.min.css" rel="stylesheet">
-	<script src="themes/default/bootstrap-3.0.2/js/bootstrap.min.js"></script>
 	<link href="themes/default/css/default.css" rel="stylesheet">
 	<!-- Load any future theme wieth the App init function-->
 
@@ -43,5 +39,11 @@
 	<div id="blackBoxLayer"></div><!--To dark the screen-->
 	<div id="modalLayer"></div><!--For modal layer to be injected-->
 	<div id="popOverLayer"></div><!--For popUpLayer to be injected layer to be injected-->
+	<!--Libs and dependencies-->
+	<script data-main="js/require-config" src="js/lib/require/require-2.1.9.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/head/head-load-1.0.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/jquery/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/js/lib/jquery/plugins/jquery.touch-1.3.2.js"></script>
+	<script src="themes/default/bootstrap-3.0.2/js/bootstrap.min.js"></script>
 </body>
 </html>

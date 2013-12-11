@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"table",
+				"tablet"
+			],
+			[
+				"off",
+				"off-canvas-bottom"
+			],
+			[
+				"windo",
+				"windowHeight"
+			],
+			[
+				"window",
+				"windowWidth"
+			],
+			[
+				"with",
+				"withContent"
+			],
+			[
+				"popOver",
+				"popOverLayer"
+			],
+			[
 				"err",
 				"error"
 			],
@@ -59,104 +91,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "app/index.html",
-			"settings":
-			{
-				"buffer_size": 1543,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/js/require-config.js",
-			"settings":
-			{
-				"buffer_size": 816,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/js/static/session.js",
-			"settings":
-			{
-				"buffer_size": 406,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Searching 14 files for \"checkCredentials\"\n\n/Users/albertlealgibert/GIT/WeappEngine/app/js/plugins/default/OWASession.js:\n    8  			Utils.log.write('OWAStorage.init');\n    9  		}\n   10: 		checkCredentials = function(credentials) {\n   11: 			Utils.log.write('OWAStorage.checkCredentials');\n   12  			Utils.log.write(credentials);\n   13  		}\n\n/Users/albertlealgibert/GIT/WeappEngine/app/js/static/session.js:\n    8  			OWASession.init(credentials);\n    9  		},\n   10: 		checkCredentials : function(credentials){\n   11  			//credentials contains a key value, so the plugin can read and validate\n   12: 			OWASession.checkCredentials(credentials);\n   13  		}\n   14  	};\n\n4 matches across 2 files\n\n\nSearching 9 files for \"Utils.log\"\n\n/Users/albertlealgibert/GIT/WeappEngine/app/js/plugins/default/OWASession.js:\n    5  	__OWASession.prototype = {\n    6  		init : function(){\n    7: 			Utils.log.write('OWASession init');\n    8  		},\n    9  		checkCredentials : function(credentials) {\n   10: 			Utils.log.write('OWASession checkCredentials');\n   11: 			Utils.log.write(credentials);\n   12  		}\n   13  	};\n\n/Users/albertlealgibert/GIT/WeappEngine/app/js/plugins/default/OWAStorage.js:\n    1  define([],function() {\n    2  	__OWAStorage = function(){\n    3: 		Utils.log.owa.write('OWAStorage required');\n    4  	};\n    5  	__OWAStorage.prototype = {\n\n/Users/albertlealgibert/GIT/WeappEngine/app/js/static/app.js:\n    5  	__APP.prototype = {\n    6  		init: function(){\n    7: 			Utils.log.write('App init');\n    8  			Device.init();\n    9  			Config.init();\n\n/Users/albertlealgibert/GIT/WeappEngine/app/js/static/config.js:\n    6  	__CONFIG.prototype = {\n    7  		init : function(){\n    8: 			Utils.log.isEnabled = this.isLogEnabled;\n    9: 			Utils.log.write('Config init');\n   10  		}\n   11  	};\n\n/Users/albertlealgibert/GIT/WeappEngine/app/js/static/device.js:\n   13  	__DEVICE.prototype = {\n   14  		init : function(){\n   15: 			Utils.log.write('Device init');\n   16  		}\n   17  	};\n\n/Users/albertlealgibert/GIT/WeappEngine/app/js/static/session.js:\n    5  	__SESSION.prototype = {\n    6  		init: function(){\n    7: 			Utils.log.write('Session init');\n    8  			OWASession.init();\n    9  		},\n\n/Users/albertlealgibert/GIT/WeappEngine/app/js/static/utils.js:\n    7  		isOWAEnabled : true,\n    8  		write : function(msg){\n    9: 			Utils.log.isEnabled ? console.log(msg) : '';	\n   10  		},\n   11  		warn : function(msg){\n   12: 			Utils.log.isEnabled ? console.warn(msg) : '';	\n   13  		},\n   14  		error : function(msg, handler){\n   15: 			Utils.log.isEnabled ? console.error(msg,handler) : '';\n   16  		},\n   17  		owa: {\n   18  			write : function(msg){\n   19: 			Utils.log.isOWAEnabled ? console.log(msg) : '';	\n   20  		},\n   21  		warn : function(msg){\n   22: 			Utils.log.isOWAEnabled ? console.warn(msg) : '';	\n   23  		},\n   24  		error : function(msg, handler){\n   25: 			Utils.log.isOWAEnabled ? console.error(msg,handler) : '';\n   26  		}\n   27  		}\n\n15 matches across 7 files\n",
-			"settings":
-			{
-				"buffer_size": 2982,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "app/js/static/config.js",
-			"settings":
-			{
-				"buffer_size": 271,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/js/plugins/default/OWASession.js",
-			"settings":
-			{
-				"buffer_size": 366,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/js/static/device.js",
-			"settings":
-			{
-				"buffer_size": 336,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/js/static/utils.js",
-			"settings":
-			{
-				"buffer_size": 682,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/js/static/app.js",
-			"settings":
-			{
-				"buffer_size": 314,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/js/plugins/default/OWAStorage.js",
-			"settings":
-			{
-				"buffer_size": 164,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/js/plugins/default/OWABridge.js",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<html lang=\"en\"><head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <meta name=\"description\" content=\"\">\n    <meta name=\"author\" content=\"\">\n    <link rel=\"shortcut icon\" href=\"../../docs-assets/ico/favicon.png\">\n\n    <title>Starter Template for Bootstrap</title>\n\n    <!-- Bootstrap core CSS -->\n    <link href=\"themes/default/css/default.css\" rel=\"stylesheet\">\n\n    <!-- Custom styles for this template -->\n  </head>\n\n  <body style=\"\">\n\n    <div class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\n      <div class=\"container\">\n        <div class=\"navbar-header\">\n          <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n          <a class=\"navbar-brand\" href=\"#\">Project name</a>\n        </div>\n        <div class=\"collapse navbar-collapse\">\n          <ul class=\"nav navbar-nav\">\n            <li class=\"active\"><a href=\"#\">Home</a></li>\n            <li><a href=\"#about\">About</a></li>\n            <li><a href=\"#contact\">Contact</a></li>\n          </ul>\n        </div><!--/.nav-collapse -->\n      </div>\n    </div>\n\n    <div class=\"container\">\n\n      <div class=\"starter-template\">\n        <h1>Bootstrap starter template</h1>\n        <p class=\"lead\">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>\n      </div>\n\n    </div><!-- /.container -->\n\n\n    <!-- Bootstrap core JavaScript\n    ================================================== -->\n    <!-- Placed at the end of the document so the pages load faster -->\n    <script src=\"https://code.jquery.com/jquery-1.10.2.min.js\"></script>\n    <script src=\"themes/default/bootstrap-3.0.2/js/bootstrap.min.js\"></script>\n  \n\n</body></html>",
-			"settings":
-			{
-				"buffer_size": 2060,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -164,6 +98,10 @@
 		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
 			[
 				"tag",
 				"Tag: Auto-Format Tags on Document"
@@ -314,23 +252,47 @@
 	},
 	"file_history":
 	[
-		"/Users/albertlealgibert/GIT/WeappEngine/app/js/plugins/default/OWABridge.js",
-		"/Users/albertlealgibert/GIT/WeappEngine/app/js/static/app.js",
-		"/Users/albertlealgibert/GIT/WeappEngine/app/js/static/utils.js",
-		"/Users/albertlealgibert/GIT/WeappEngine/OWebApp.sublime-project",
-		"/Users/albertlealgibert/GIT/WeappEngine/app/js/plugins/default/OWAStorage.js",
-		"/Users/albertlealgibert/GIT/WeappEngine/app/js/static/device.js",
-		"/Users/albertlealgibert/GIT/WeappEngine/app/js/plugins/default/OWASession.js",
+		"/Users/albertlealgibert/GIT/OWApp/OWebApp.sublime-project",
+		"/Users/albertlealgibert/GIT/WeappEngine/from mega/OWApp/app/test/index.html",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/test/index.html",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/test/index2.html",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/index.html",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/core/navigation.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/core/animation.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/app.json",
 		"/Users/albertlealgibert/GIT/WeappEngine/app/js/static/session.js",
-		"/Users/albertlealgibert/GIT/WeappEngine/app/themes/default/sass/default.scss",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/static/config.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/plugins/default/OWASession.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/static/device.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/static/ui.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/static/utils.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/plugins/default/OWAStorage.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/plugins/default/OWABridge.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/static/navigation.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/static/animation.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/static/eventBus.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/static/eventHandler.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/core.js",
 		"/Users/albertlealgibert/GIT/WeappEngine/README.md",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/Gruntfile.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/OWebApp.sublime-project",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/package.json",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/config.rb",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/core-init.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/static/error.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/require-config.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/core/app.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/core/session.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/core/config.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/static/app.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/lib/jquery/jquery-2.0.3.min.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/js/static/uri.js",
+		"/Users/albertlealgibert/GIT/WeappEngine/app/themes/default/sass/default.scss",
 		"/Users/albertlealgibert/GIT/WeappEngine/js/static/config.js",
 		"/Users/albertlealgibert/GIT/WeappEngine/index.html",
 		"/Users/albertlealgibert/GIT/WeappEngine/js/static/utils.js",
-		"/Users/albertlealgibert/GIT/WeappEngine/app/js/require-config.js",
 		"/Users/albertlealgibert/GIT/WeappEngine/js/static/app.js",
 		"/Users/albertlealgibert/GIT/WeappEngine/js/static/main.js",
-		"/Users/albertlealgibert/GIT/WeappEngine/app/js/lib/jquery/jquery-2.0.3.min.js",
 		"/Users/albertlealgibert/GIT/WeappEngine/app/js/static/constats.js",
 		"/Users/albertlealgibert/GIT/WeappEngine/app/themes/default/bootstrap-3.0.2/css/bootstrap-theme.min.css",
 		"/Users/albertlealgibert/GIT/WeappEngine/app/js/static/require-configuration.js",
@@ -340,7 +302,6 @@
 		"/Users/albertlealgibert/GIT/WeappEngine/app/themes/default/css/default.css",
 		"/Users/albertlealgibert/GIT/WeappEngine/app/js/static/log.js",
 		"/Users/albertlealgibert/GIT/WeappEngine/app/js/main.js",
-		"/Users/albertlealgibert/GIT/WeappEngine/app/js/static/config.js",
 		"/Users/albertlealgibert/GIT/WeappEngine/MAMP-PRO-Logo.gif",
 		"/Users/albertlealgibert/GIT/expedientBrowser/Expedients/Expedient Albert Leal.exp",
 		"/Users/albertlealgibert/IDK/GIT/bsmobil-api-dev/src/web/h5/js/global/ajaxModule/proxy.js",
@@ -391,7 +352,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"*.js",
@@ -405,6 +366,57 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"toogleOffCanvasLeft",
+			"title",
+			"whitesmoke",
+			"test 1",
+			"scrollable",
+			"0.1s",
+			"1s",
+			"0.2s",
+			"display",
+			"<li>test 1</li>\n					<li>test 1</li>\n					<li>test 1</li>\n					<li>test 1</li>\n					<li>test 1</li>\n					<li>test 1</li>\n					<li>test 1</li>\n					<li>test 1</li>\n					<li>test 1</li>\n					<li>test 1</li>",
+			"acive",
+			"canvasContent",
+			"content",
+			"backgound_paperboard.png",
+			"back",
+			"background_brushed",
+			"-webkit-backface-visibility: hidden;",
+			" -webkit-backface-visibility: hidden;",
+			".off-canvas-left",
+			"black",
+			".off-canvas-left",
+			"in-canvas-left-active",
+			"off-canvas-left-active",
+			"pushRightMenu",
+			"300",
+			"1s",
+			"RightC",
+			"Right",
+			"pushLeft200Px",
+			"pushRight200Px",
+			"80",
+			"mobile",
+			"400",
+			"4s",
+			"class",
+			"ease-out",
+			"linear",
+			"ease",
+			",  modalID",
+			", modalID",
+			"id",
+			"navigation",
+			"static",
+			"__DEVICE",
+			"__ERROR",
+			"operativa",
+			"withModals",
+			"/js/",
+			"main",
+			"__CONFIG",
+			"__Utils",
 			"Utils.log.write",
 			"Utils.log",
 			"isEnabled",
@@ -486,427 +498,13 @@
 	"groups":
 	[
 		{
-			"selected": 9,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/index.html",
-					"settings":
-					{
-						"buffer_size": 1543,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								487,
-								487
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/js/require-config.js",
-					"settings":
-					{
-						"buffer_size": 816,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								52,
-								52
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/js/static/session.js",
-					"settings":
-					{
-						"buffer_size": 406,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								406,
-								406
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"settings":
-					{
-						"buffer_size": 2982,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										187,
-										203
-									],
-									[
-										268,
-										284
-									],
-									[
-										467,
-										483
-									],
-									[
-										612,
-										628
-									],
-									[
-										879,
-										888
-									],
-									[
-										989,
-										998
-									],
-									[
-										1047,
-										1056
-									],
-									[
-										1252,
-										1261
-									],
-									[
-										1470,
-										1479
-									],
-									[
-										1684,
-										1693
-									],
-									[
-										1735,
-										1744
-									],
-									[
-										1924,
-										1933
-									],
-									[
-										2114,
-										2123
-									],
-									[
-										2325,
-										2334
-									],
-									[
-										2424,
-										2433
-									],
-									[
-										2534,
-										2543
-									],
-									[
-										2660,
-										2669
-									],
-									[
-										2762,
-										2771
-									],
-									[
-										2875,
-										2884
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								886,
-								886
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"output_tag": 2,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 357.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/js/static/config.js",
-					"settings":
-					{
-						"buffer_size": 271,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								47,
-								47
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/js/plugins/default/OWASession.js",
-					"settings":
-					{
-						"buffer_size": 366,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								164,
-								164
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/js/static/device.js",
-					"settings":
-					{
-						"buffer_size": 336,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								196,
-								196
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/js/static/utils.js",
-					"settings":
-					{
-						"buffer_size": 682,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								356,
-								360
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "app/js/static/app.js",
-					"settings":
-					{
-						"buffer_size": 314,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								47,
-								47
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "app/js/plugins/default/OWAStorage.js",
-					"settings":
-					{
-						"buffer_size": 164,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "app/js/plugins/default/OWABridge.js",
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		},
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 11,
-					"settings":
-					{
-						"buffer_size": 2060,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								579,
-								579
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 162.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -938,7 +536,7 @@
 		"cols":
 		[
 			0.0,
-			0.608964731859,
+			0.924357034796,
 			1.0
 		],
 		"rows":
@@ -963,12 +561,40 @@
 		"selected_items":
 		[
 			[
-				"stora",
-				"app/js/plugins/default/OWAStorage.js"
+				"animation",
+				"app/js/core/animation.js"
+			],
+			[
+				"naviga",
+				"app/js/core/navigation.js"
+			],
+			[
+				"nimation",
+				"app/js/core/animation.js"
 			],
 			[
 				"app",
-				"app/js/static/app.js"
+				"app/js/core/app.js"
+			],
+			[
+				"navi",
+				"app/js/core/navigation.js"
+			],
+			[
+				"sess",
+				"app/js/core/session.js"
+			],
+			[
+				"devi",
+				"app/js/static/device.js"
+			],
+			[
+				"require",
+				"app/js/require-config.js"
+			],
+			[
+				"stora",
+				"app/js/plugins/default/OWAStorage.js"
 			],
 			[
 				"util",
@@ -987,19 +613,11 @@
 				"app/js/static/config.js"
 			],
 			[
-				"sess",
-				"app/js/static/session.js"
-			],
-			[
 				"ses",
 				"app/js/static/session.js"
 			],
 			[
 				"reqir",
-				"app/js/require-config.js"
-			],
-			[
-				"require",
 				"app/js/require-config.js"
 			],
 			[
