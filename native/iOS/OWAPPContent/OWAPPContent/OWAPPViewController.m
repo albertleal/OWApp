@@ -19,6 +19,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://albertleal.com/apps/owapp/test/index.html"]];
+    
+    //Should delete when HTML manifest is ready
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
+    
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     self.webView.scrollView.bounces = NO;
     [self.webView loadRequest:request];

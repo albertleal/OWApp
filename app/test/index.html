@@ -267,23 +267,24 @@
 
 
 			$('body').hammer().on('swipe', function(event){ //capture swipe event
-
 				if ( $('#leftLayer').hasClass('off-canvas-left-active') ) { //active menu
 					if (event.gesture.direction == 'left') { //swipe left
-						alert('LEFT!');
+						//alert('LEFT!');
+						$('#operationContent').removeClass('scrollable');
 						showLeftMenu();
 					}					
 				}else{
-					tanto = ($('#centerLayer').width()*30)/100; //30% container width(left menu size)
+					var tanto = ($('#centerLayer').width()*30)/100; //30% container width(left menu size)
 					if (event.gesture.startEvent.center.pageX < tanto) { //did gesture start in
 						if (event.gesture.direction == 'right') { //swipe right
-							alert('RIGHT!');
+							//alert('RIGHT!');
 							showLeftMenu();
 						}
 					}else{ //out of menu zone
-						alert('TOO FAR FROM MENU!');
+						//alert('TOO FAR FROM MENU!');
 					}
 				}
+				$('#operationContent').addClass('scrollable');
 			});
 		
 		});
