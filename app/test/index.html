@@ -207,6 +207,8 @@
 
 	</style>
 	<script type="text/javascript" charset="utf-8" src="../js/lib/jquery/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../js/lib/hammer/hammer.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../js/lib/hammer/jquery.hammer.js"></script>
 	<script type="text/javascript">
 		function showLeftMenu(){
 			if($('.in-canvas').hasClass('in-canvas-left-active')){
@@ -263,7 +265,29 @@
 				}
 			});
 
+
+			$('body').hammer().on('swipe', function(event){ //capture swipe event
+
+				if ( $('#leftLayer').hasClass('off-canvas-left-active') ) { //active menu
+					if (event.gesture.direction == 'left') { //swipe left
+						alert('LEFT!');
+						showLeftMenu();
+					}					
+				}else{
+					tanto = ($('#centerLayer').width()*30)/100; //30% container width(left menu size)
+					if (event.gesture.startEvent.center.pageX < tanto) { //did gesture start in
+						if (event.gesture.direction == 'right') { //swipe right
+							alert('RIGHT!');
+							showLeftMenu();
+						}
+					}else{ //out of menu zone
+						alert('TOO FAR FROM MENU!');
+					}
+				}
+			});
+		
 		});
+
 		function resizeInterface(){
 			var windowWidth = $( window ).width();
 			var windowHeight = $( window ).height();
