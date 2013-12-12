@@ -278,13 +278,13 @@
 					if (event.gesture.startEvent.center.pageX < tanto) { //did gesture start in
 						if (event.gesture.direction == 'right') { //swipe right
 							//alert('RIGHT!');
+							$('#operationContent').addClass('scrollable');
 							showLeftMenu();
 						}
 					}else{ //out of menu zone
 						//alert('TOO FAR FROM MENU!');
 					}
 				}
-				$('#operationContent').addClass('scrollable');
 			});
 		
 		});
