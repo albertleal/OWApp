@@ -11,7 +11,7 @@
 	<div id="container">
 		<div id="leftLayer" class="canvas off-canvas-left">
 			<div class="canvas-content">
-				<ul id="menu" class="canvas">
+				<ul id="menu" class="canvas scrollable">
 					<li class="menu-element">
 						<div class="icon"></div>
 						<div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
@@ -160,7 +160,8 @@ Fusce sagittis cursus nisl id aliquet. Proin cursus justo non cursus pellentesqu
 			window.ontouchmove = function(e) {e.preventDefault()};
 			//Force scroll on scrollable class
 			$('.scrollable').on('touchmove', function(e){
-				e.stopPropagation();
+				//alert('scroll');
+				e.stopImmediatePropagation();
 			});
 			$( window ).resize(function() {
 				resizeInterface();
