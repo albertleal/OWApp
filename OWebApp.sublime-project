@@ -3,7 +3,7 @@
 	[
 		{
 			"path": "~/GIT/OWAPP/",
-			"folder_exclude_patterns": ["lib", ".sass-cache", "bootstrap-3.0.2","css"],
+			"folder_exclude_patterns": ["lib", ".sass-cache", "bootstrap-3.0.2"],
 			"file_exclude_patterns": [".gitignore", "OWebApp.sublime-workspace"]
 
 		}

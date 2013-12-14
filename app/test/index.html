@@ -1,211 +1,120 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<title>test animations</title>
-	<style type="text/css">
-	*:hover, *:active{
-		display: none;
-	}
-	body{
-		float:left;
-		left:200px;
-		margin: 0px;
-		background: url(../themes/default/images/background_tweed.png) repeat;
-		background: white;
-		font-size:22px;
-		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-    	font-weight: 300;
-    	user-select: none;
-    	-webkit-user-select: none;
-	}
-	p, h3 {
-		margin: 0 !important;
-	}
-	#footer {
-		height:50px;
-		width:100%;
-		background: white;
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		display: none;
-	}
-	#header{
-		height: 88px;
-		width: 100%;
-		background: #F5F5F5;
-		border-bottom: 1px solid #d1d1d1;
-		box-sizing: border-box;
-	}
-	#header #title{
-		padding-top: 0.9em;
-		font-size: 1.5em;
-		font-weight: 900;
-		float: left;
-		text-align: center;
-		width: 100%;
-	}
-	#header #displayLeftPanel{
-		background: url(../themes/default/images/icons/766-arrow-right@2x.png) no-repeat center;
-		height: 68px;
-		width: 36px;
-		float: left;
-		position: absolute;
-		background-size: 14px;
-		-webkit-transition: -webkit-transform 0.3s linear;
-		-webkit-transform: rotateY(0deg);
-		box-sizing: border-box;
-	}
-	#header #displayLeftPanel.ui-state-active{
-		-webkit-transition: -webkit-transform 0.3s linear;
-		-webkit-transform: rotateY(180deg);
-	}
-	.scrollable{
-		overflow: scroll; 
-		-webkit-overflow-scrolling: touch;
-	}
-	.no-touch{
-		pointer-events: none;
-		-webkit-filter:blur(0.1em);
-	}
-	#container{
-		transform:translateY(-50px);
-		font-size:0.7em;
-		background: #E9E9E9;
-		text-align:justify;
-	}
-	#container #operationContent{
-		float:left;
-		background:#e8e8e8;
-	}
-	.canvas .canvas-content{
-		-webkit-transform: translateY(0);
-		padding-top:20px;
-	}
-	ul.menu{
-		padding:0;
-		margin:0;
-		list-style: none;
-		background: white;
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-	li.menu-element{
-		width: 100%;
-		height: 44px;
-		clear: both;
-		margin-bottom: 4px;
-	}
-	li.menu-element .icon{
-		width: 40px;
-		min-height: 40px;
-		background: #F5F5F5
-			url(../themes/default/images/icons/769-male@2x.png) 
-			center 
-			no-repeat;
-		float: left;
-		border-radius: 2em;
-		background-size: 46px;
-	}
-	li.menu-element .content{
-		vertical-align: middle;
-		border-bottom: 1px solid #F5F5F5;
-		min-height: 44px;
-		position: relative;
-		padding-left: 15px;
-		box-sizing: border-box;
-		padding-top: 10px;
+	<link href="../themes/default/css/default.css" rel="stylesheet">
+	<link href="../themes/default/css/animations.css" rel="stylesheet"></head>
+<body class="">
+	<div id="container">
+		<div id="leftLayer" class="canvas off-canvas-left">
+			<div class="canvas-content">
+				<ul id="menu" class="canvas scrollable">
+					<li class="menu-element">
+						<div class="icon"></div>
+						<div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+					</li>
+					<li class="menu-element">
+						<div class="icon"></div>
+						<div class="content">test 2</div>
+					</li>
+					<li class="menu-element">
+						<div class="icon"></div>
+						<div class="content">test 3</div>
+					</li>
+					<li class="menu-element">
+						<div class="icon"></div>
+						<div class="content">test 4</div>
+					</li>
+					<li class="menu-element">
+						<div class="icon"></div>
+						<div class="content">test 5</div>
+					</li>
+					<li class="menu-element">
+						<div class="icon"></div>
+						<div class="content">test 6</div>
+					</li>
+					<li class="menu-element">
+						<div class="icon"></div>
+						<div class="content">test 7</div>
+					</li>
+					<li class="menu-element">
+						<div class="icon"></div>
+						<div class="content">test 8</div>
+					</li>
+					<li class="menu-element">
+						<div class="icon"></div>
+						<div class="content">test 9</div>
+					</li>
+					<li class="menu-element">
+						<div class="icon"></div>
+						<div class="content">test 10</div>
+					</li>
+					<li class="menu-element">
+						<div class="icon"></div>
+						<div class="content">test 11</div>
+					</li>
+					<li class="menu-element">
+						<div class="icon"></div>
+						<div class="content">test 12</div>
+					</li>
+					<li class="menu-element">
+						<div class="icon"></div>
+						<div class="content">test 13</div>
+					</li>
+					<li class="menu-element">
+						<div class="icon"></div>
+						<div class="content">test 14</div>
+					</li>
+					<li class="menu-element">
+						<div class="icon"></div>
+						<div class="content">test 15</div>
+					</li>
+					<li class="menu-element">
+						<div class="icon"></div>
+						<div class="content">test 16</div>
+					</li>
+					<li class="menu-element">
+						<div class="icon"></div>
+						<div class="content">test 17</div>
+					</li>
+					<li class="menu-element">
+						<div class="icon"></div>
+						<div class="content">test 18</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="centerLayer" class="canvas in-canvas">
+			<div id="header" class="canvas-content">
+				<div id="displayLeftPanel">&nbsp;</div>
+				<center>
+					<div id="title">operation title</div>
+				</center>
+			</div>
+			<div class="scrollable" id="operationContent">
+				<h3>PAGINA 1</h3>
+				<br/>
+				<button id="pushLeftToPage2">push left to page 2</button>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet nisi a justo cursus mollis. Cras fermentum mi in velit sagittis, id facilisis ipsum mollis. Phasellus aliquet, mi vel volutpat volutpat, orci dolor porttitor mauris, quis tempus ipsum risus a enim. Duis ut tempus tortor. Aenean hendrerit at mi eget accumsan. Aenean eget est condimentum, mollis lorem ut, adipiscing risus. Mauris aliquam in sapien quis consectetur. Vivamus non eros sed ante lobortis porta.
 
-		text-overflow: ellipsis;
-		overflow: hidden;
-		white-space: nowrap;
-		word-wrap: normal;
-	}
+Fusce in tellus vitae libero lacinia placerat. Nulla tincidunt, arcu et porta scelerisque, tortor mauris iaculis dolor, eget scelerisque enim urna quis tellus. Nunc arcu dolor, tincidunt ac est ut, semper venenatis magna. Vestibulum id orci congue, dictum elit pellentesque, laoreet orci. Maecenas nisl nisi, aliquet vel volutpat nec, bibendum id ante. Integer tincidunt dictum sapien eu hendrerit. Quisque ultricies imperdiet porta. Vivamus vulputate velit massa. Nam massa nulla, iaculis nec turpis at, faucibus congue augue. Nunc ornare quam id lorem elementum, sit amet porta nibh eleifend. Cras dui orci, auctor ut bibendum hendrerit, fermentum sit amet est. Integer ut dapibus orci, ut imperdiet diam. Donec sit amet odio nisi.
 
-	/*ANIMATIONS*/
-	body.mobile .off-canvas-left{
-		width:80%;
-		left:-20%;
-	}
-	body.tablet .off-canvas-left{
-		width:40%;
-		left:-10%;
-	}
-	.off-canvas-left{
-		float: left;
-		position: fixed;
-		border-right: 1px solid #d1d1d1;
-		z-index: 1;
-		box-sizing:border-box;
-	}
-	.off-canvas-left-active{
-		left: 0 !important;
-	}
-	.off-canvas-right{
-		width:25%;
-		background: green;
-		float: left;
-		position: fixed;
-		left:100%;
-	}
-	.off-canvas-right-active{
-		left:75%;
-	}
-	.in-canvas{
-		margin-top:0em;
-		width:100%;
-		background: grey;
-		float: left;
-		position:fixed;
-		left:0px;
-		z-index:2;
-	}
-	.in-canvas-right-active{
-		left:-25%;	
-	}
-	body.mobile .in-canvas-left-active{
-		left:80%;
-	}
-	body.tablet .in-canvas-left-active{
-		left:40%;
-	}
-
-	body.mobile .pushRightContentForMenu{ 
-
-    	-webkit-transition: -webkit-transform 0.3s linear;
-    	-webkit-transform: translateX(80%);
-	}
-	body.mobile .pushRightMenu, body.tablet .pushRightMenu{ 
-    	-webkit-transition: -webkit-transform 0.3s linear;
-    	-webkit-transform: translateX(25%);
-	}
-	body.mobile .pushLeftContentForMenu{ 
-
-    	-webkit-transition: -webkit-transform 0.3s linear;
-    	-webkit-transform: translateX(-80%);
-	}
-	body.mobile .pushLeftMenu, body.tablet .pushLeftMenu{ 
-    	-webkit-transition: -webkit-transform 0.3s linear;
-    	-webkit-transform: translateX(-25%);
-	}
-
-	body.tablet .pushRightContentForMenu{ 
-
-    	-webkit-transition: -webkit-transform 0.3s linear;
-    	-webkit-transform: translateX(40%);
-	}
-	body.tablet .pushLeftContentForMenu{ 
-
-    	-webkit-transition: -webkit-transform 0.3s linear;
-    	-webkit-transform: translateX(-40%);
-	}
-
-
-	</style>
+Fusce sagittis cursus nisl id aliquet. Proin cursus justo non cursus pellentesque. Suspendisse varius rutrum molestie. Aliquam euismod molestie dignissim. Donec id dui mauris. Pellentesque orci nisi, molestie ut ultricies ac, ornare a dui. Duis porttitor dui id urna porta aliquam. Curabitur eu placerat elit.
+				</p>
+			</div>
+			<div id="footer">hola footer</div>
+		</div>
+		<div id="rightLayer" class="canvas off-canvas-right">
+			<div class="canvas-content">
+				RIGHT
+				<a href="javascript:toogleOffCanvasRight();">toogleOffCanvasRight</a>
+			</div>
+		</div>
+	</div>
 	<script type="text/javascript" charset="utf-8" src="../js/lib/jquery/jquery-2.0.3.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="../js/lib/hammer/hammer.js"></script>
 	<script type="text/javascript" charset="utf-8" src="../js/lib/hammer/jquery.hammer.js"></script>
@@ -213,6 +122,7 @@
 		function showLeftMenu(){
 			if($('.in-canvas').hasClass('in-canvas-left-active')){
 				$('#operationContent').removeClass('no-touch');
+				$('#footer').removeClass('no-touch');
 
 				$('.in-canvas').addClass('pushLeftContentForMenu');
 				$('.off-canvas-left').addClass('pushLeftMenu');	
@@ -224,8 +134,9 @@
 					$('.off-canvas-left').removeClass('pushLeftMenu');
 				},300);
 			}else{
-				$('.menu').scrollTop(0);
+				$('#menu').scrollTop(0);
 				$('#operationContent').addClass('no-touch');
+				$('#footer').addClass('no-touch');
 
 				$('.in-canvas').addClass('pushRightContentForMenu');
 				$('.off-canvas-left').addClass('pushRightMenu');
@@ -238,7 +149,7 @@
 				},300);
 			}
 		}
-		$( document ).ready(function() {
+		$(document).ready(function() {
 			//No scrollable webapp
 			window.ontouchmove = function(e) {e.preventDefault()};
 			//Force scroll on scrollable class
@@ -264,13 +175,12 @@
 					showLeftMenu();
 				}
 			});
-
-
 			$('body').hammer().on('swipe', function(event){ //capture swipe event
 				if ( $('#leftLayer').hasClass('off-canvas-left-active') ) { //active menu
 					if (event.gesture.direction == 'left') { //swipe left
 						//alert('LEFT!');
-						$('#operationContent').removeClass('scrollable');
+						$('#operationContent').addClass('scrollable');
+						$('#menu').removeClass("scrollable");
 						showLeftMenu();
 					}					
 				}else{
@@ -278,7 +188,8 @@
 					if (event.gesture.startEvent.center.pageX < tanto) { //did gesture start in
 						if (event.gesture.direction == 'right') { //swipe right
 							//alert('RIGHT!');
-							$('#operationContent').addClass('scrollable');
+							$('#operationContent').removeClass('scrollable');
+							$('#menu').addClass("scrollable");
 							showLeftMenu();
 						}
 					}else{ //out of menu zone
@@ -286,7 +197,6 @@
 					}
 				}
 			});
-		
 		});
 
 		function resizeInterface(){
@@ -302,82 +212,10 @@
 				$('body').removeClass("tablet");
 				$('body').addClass("mobile");
 			}
-			$('.canvas').height(windowHeight);	
+			$('.canvas').height(windowHeight);
+			$('#menu').height(windowHeight-parseInt($('.canvas-content').css('padding-top').replace('px','')));
 			$('#operationContent').height(windowHeight-headerHeight-footerHeight);
 		};
 	</script>
-</head>
-<body class="">
-	<div id="container">
-		<div id="leftLayer" class="canvas off-canvas-left">
-			<div class="canvas-content">
-				<ul class="canvas menu scrollable">
-					<li class="menu-element"><div class="icon"></div><div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div></li>
-					<li class="menu-element"><div class="icon"></div><div class="content">test 2</div></li>
-					<li class="menu-element"><div class="icon"></div><div class="content">test 3</div></li>
-					<li class="menu-element"><div class="icon"></div><div class="content">test 4</div></li>
-					<li class="menu-element"><div class="icon"></div><div class="content">test 5</div></li>
-					<li class="menu-element"><div class="icon"></div><div class="content">test 6</div></li>
-					<li class="menu-element"><div class="icon"></div><div class="content">test 7</div></li>
-					<li class="menu-element"><div class="icon"></div><div class="content">test 8</div></li>
-					<li class="menu-element"><div class="icon"></div><div class="content">test 9</div></li>
-					<li class="menu-element"><div class="icon"></div><div class="content">test 10</div></li>
-					<li class="menu-element"><div class="icon"></div><div class="content">test 11</div></li>
-					<li class="menu-element"><div class="icon"></div><div class="content">test 12</div></li>
-					<li class="menu-element"><div class="icon"></div><div class="content">test 13</div></li>
-					<li class="menu-element"><div class="icon"></div><div class="content">test 14</div></li>
-					<li class="menu-element"><div class="icon"></div><div class="content">test 15</div></li>
-					<li class="menu-element"><div class="icon"></div><div class="content">test 16</div></li>
-					<li class="menu-element"><div class="icon"></div><div class="content">test 17</div></li>
-					<li class="menu-element"><div class="icon"></div><div class="content">test 18</div></li>
-				</ul>
-			</div>
-		</div>
-		<div id="centerLayer" class="canvas in-canvas">
-			<div id="header" class="canvas-content">
-				<div id="displayLeftPanel">&nbsp;</div>
-					<center>
-						<div id="title">operation title</div>
-					</center>
-				</div>
-			<div class="scrollable" id="operationContent">
-					<h3>PAGINA 1</h3>
-					<br/>
-					<button id="pushLeftToPage2"> push left to page 2</button>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet nisi a justo cursus mollis. Cras fermentum mi in velit sagittis, id facilisis ipsum mollis. Phasellus aliquet, mi vel volutpat volutpat, orci dolor porttitor mauris, quis tempus ipsum risus a enim. Duis ut tempus tortor. Aenean hendrerit at mi eget accumsan. Aenean eget est condimentum, mollis lorem ut, adipiscing risus. Mauris aliquam in sapien quis consectetur. Vivamus non eros sed ante lobortis porta.
-
-Fusce in tellus vitae libero lacinia placerat. Nulla tincidunt, arcu et porta scelerisque, tortor mauris iaculis dolor, eget scelerisque enim urna quis tellus. Nunc arcu dolor, tincidunt ac est ut, semper venenatis magna. Vestibulum id orci congue, dictum elit pellentesque, laoreet orci. Maecenas nisl nisi, aliquet vel volutpat nec, bibendum id ante. Integer tincidunt dictum sapien eu hendrerit. Quisque ultricies imperdiet porta. Vivamus vulputate velit massa. Nam massa nulla, iaculis nec turpis at, faucibus congue augue. Nunc ornare quam id lorem elementum, sit amet porta nibh eleifend. Cras dui orci, auctor ut bibendum hendrerit, fermentum sit amet est. Integer ut dapibus orci, ut imperdiet diam. Donec sit amet odio nisi.
-
-Fusce sagittis cursus nisl id aliquet. Proin cursus justo non cursus pellentesque. Suspendisse varius rutrum molestie. Aliquam euismod molestie dignissim. Donec id dui mauris. Pellentesque orci nisi, molestie ut ultricies ac, ornare a dui. Duis porttitor dui id urna porta aliquam. Curabitur eu placerat elit.
-
-Fusce velit ligula, interdum eu mauris sed, accumsan congue turpis. Vestibulum in aliquet enim. Morbi feugiat, purus id convallis eleifend, orci mauris semper erat, a dictum magna libero vitae risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi mi enim, aliquet eget magna in, mollis eleifend nisl. Fusce egestas sed urna et facilisis. Fusce in elementum augue. Aliquam ac placerat tortor. Maecenas non tempus urna. Cras rhoncus sed tellus nec pretium. In pretium velit vel arcu iaculis vestibulum. Sed nunc tellus, pharetra consectetur quam placerat, porta porttitor risus. Donec et cursus turpis. Nulla id iaculis mi, in rutrum magna.
-
-Mauris sollicitudin turpis tristique, elementum neque sed, congue nibh. Duis vehicula semper turpis. Cras at diam aliquam, vestibulum neque ac, blandit dui. Duis eget magna tempor, lacinia erat nec, condimentum nunc. Pellentesque consequat in lectus in lacinia. Proin fermentum euismod leo, ac ornare urna. Donec tellus ipsum, blandit at massa eget, consectetur pellentesque massa. Maecenas aliquet condimentum consectetur. Quisque quam urna, egestas pretium nulla a, tempor pretium turpis. Vestibulum in odio non erat accumsan posuere quis in leo. Suspendisse nunc velit, facilisis quis consequat at, pellentesque vitae arcu. Suspendisse facilisis arcu tristique justo iaculis, id tristique est varius. Sed bibendum tortor in nisl mollis ultrices. Aenean pellentesque libero sit amet odio semper, eget semper nunc pharetra. Morbi tellus nisl, viverra eu pharetra a, lacinia non nibh.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet nisi a justo cursus mollis. Cras fermentum mi in velit sagittis, id facilisis ipsum mollis. Phasellus aliquet, mi vel volutpat volutpat, orci dolor porttitor mauris, quis tempus ipsum risus a enim. Duis ut tempus tortor. Aenean hendrerit at mi eget accumsan. Aenean eget est condimentum, mollis lorem ut, adipiscing risus. Mauris aliquam in sapien quis consectetur. Vivamus non eros sed ante lobortis porta.
-
-Fusce in tellus vitae libero lacinia placerat. Nulla tincidunt, arcu et porta scelerisque, tortor mauris iaculis dolor, eget scelerisque enim urna quis tellus. Nunc arcu dolor, tincidunt ac est ut, semper venenatis magna. Vestibulum id orci congue, dictum elit pellentesque, laoreet orci. Maecenas nisl nisi, aliquet vel volutpat nec, bibendum id ante. Integer tincidunt dictum sapien eu hendrerit. Quisque ultricies imperdiet porta. Vivamus vulputate velit massa. Nam massa nulla, iaculis nec turpis at, faucibus congue augue. Nunc ornare quam id lorem elementum, sit amet porta nibh eleifend. Cras dui orci, auctor ut bibendum hendrerit, fermentum sit amet est. Integer ut dapibus orci, ut imperdiet diam. Donec sit amet odio nisi.
-
-Fusce sagittis cursus nisl id aliquet. Proin cursus justo non cursus pellentesque. Suspendisse varius rutrum molestie. Aliquam euismod molestie dignissim. Donec id dui mauris. Pellentesque orci nisi, molestie ut ultricies ac, ornare a dui. Duis porttitor dui id urna porta aliquam. Curabitur eu placerat elit.
-
-Fusce velit ligula, interdum eu mauris sed, accumsan congue turpis. Vestibulum in aliquet enim. Morbi feugiat, purus id convallis eleifend, orci mauris semper erat, a dictum magna libero vitae risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi mi enim, aliquet eget magna in, mollis eleifend nisl. Fusce egestas sed urna et facilisis. Fusce in elementum augue. Aliquam ac placerat tortor. Maecenas non tempus urna. Cras rhoncus sed tellus nec pretium. In pretium velit vel arcu iaculis vestibulum. Sed nunc tellus, pharetra consectetur quam placerat, porta porttitor risus. Donec et cursus turpis. Nulla id iaculis mi, in rutrum magna.
-
-Mauris sollicitudin turpis tristique, elementum neque sed, congue nibh. Duis vehicula semper turpis. Cras at diam aliquam, vestibulum neque ac, blandit dui. Duis eget magna tempor, lacinia erat nec, condimentum nunc. Pellentesque consequat in lectus in lacinia. Proin fermentum euismod leo, ac ornare urna. Donec tellus ipsum, blandit at massa eget, consectetur pellentesque massa. Maecenas aliquet condimentum consectetur. Quisque quam urna, egestas pretium nulla a, tempor pretium turpis. Vestibulum in odio non erat accumsan posuere quis in leo. Suspendisse nunc velit, facilisis quis consequat at, pellentesque vitae arcu. Suspendisse facilisis arcu tristique justo iaculis, id tristique est varius. Sed bibendum tortor in nisl mollis ultrices. Aenean pellentesque libero sit amet odio semper, eget semper nunc pharetra. Morbi tellus nisl, viverra eu pharetra a, lacinia non nibh.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet nisi a justo cursus mollis. Cras fermentum mi in velit sagittis, id facilisis ipsum mollis. Phasellus aliquet, mi vel volutpat volutpat, orci dolor porttitor mauris, quis tempus ipsum risus a enim. Duis ut tempus tortor. Aenean hendrerit at mi eget accumsan. Aenean eget est condimentum, mollis lorem ut, adipiscing risus. Mauris aliquam in sapien quis consectetur. Vivamus non eros sed ante lobortis porta.
-
-Fusce in tellus vitae libero lacinia placerat. Nulla tincidunt, arcu et porta scelerisque, tortor mauris iaculis dolor, eget scelerisque enim urna quis tellus. Nunc arcu dolor, tincidunt ac est ut, semper venenatis magna. Vestibulum id orci congue, dictum elit pellentesque, laoreet orci. Maecenas nisl nisi, aliquet vel volutpat nec, bibendum id ante. Integer tincidunt dictum sapien eu hendrerit. Quisque ultricies imperdiet porta. Vivamus vulputate velit massa. Nam massa nulla, iaculis nec turpis at, faucibus congue augue. Nunc ornare quam id lorem elementum, sit amet porta nibh eleifend. Cras dui orci, auctor ut bibendum hendrerit, fermentum sit amet est. Integer ut dapibus orci, ut imperdiet diam. Donec sit amet odio nisi.
-
-Fusce sagittis cursus nisl id aliquet. Proin cursus justo non cursus pellentesque. Suspendisse varius rutrum molestie. Aliquam euismod molestie dignissim. Donec id dui mauris. Pellentesque orci nisi, molestie ut ultricies ac, ornare a dui. Duis porttitor dui id urna porta aliquam. Curabitur eu placerat elit.
-
-Fusce velit ligula, interdum eu mauris sed, accumsan congue turpis. Vestibulum in aliquet enim. Morbi feugiat, purus id convallis eleifend, orci mauris semper erat, a dictum magna libero vitae risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi mi enim, aliquet eget magna in, mollis eleifend nisl. Fusce egestas sed urna et facilisis. Fusce in elementum augue. Aliquam ac placerat tortor. Maecenas non tempus urna. Cras rhoncus sed tellus nec pretium. In pretium velit vel arcu iaculis vestibulum. Sed nunc tellus, pharetra consectetur quam placerat, porta porttitor risus. Donec et cursus turpis. Nulla id iaculis mi, in rutrum magna.
-
-Mauris sollicitudin turpis tristique, elementum neque sed, congue nibh. Duis vehicula semper turpis. Cras at diam aliquam, vestibulum neque ac, blandit dui. Duis eget magna tempor, lacinia erat nec, condimentum nunc. Pellentesque consequat in lectus in lacinia. Proin fermentum euismod leo, ac ornare urna. Donec tellus ipsum, blandit at massa eget, consectetur pellentesque massa. Maecenas aliquet condimentum consectetur. Quisque quam urna, egestas pretium nulla a, tempor pretium turpis. Vestibulum in odio non erat accumsan posuere quis in leo. Suspendisse nunc velit, facilisis quis consequat at, pellentesque vitae arcu. Suspendisse facilisis arcu tristique justo iaculis, id tristique est varius. Sed bibendum tortor in nisl mollis ultrices. Aenean pellentesque libero sit amet odio semper, eget semper nunc pharetra. Morbi tellus nisl, viverra eu pharetra a, lacinia non nibh.</p>
-			</div>	
-			<div id="footer">hola footer</div>
-		</div>
-		<div id="rightLayer" class="canvas off-canvas-right">
-			<div class="canvas-content">
-				RIGHT
-				<a href="javascript:toogleOffCanvasRight();">toogleOffCanvasRight</a>
-			</div>
-		</div>
-	</div>
 </body>
 </html>
