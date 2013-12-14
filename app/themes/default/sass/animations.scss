@@ -5,11 +5,11 @@ body{
 
 	&.mobile{
 		.off-canvas-left {
-			width:80%;
-			left:-20%;
+			width:80% !important;
+			left:-20% !important;
 		}
 		.in-canvas-left-active {
-			left:80%;
+			left:80% !important;
 		}
 		.pushRightContentForMenu { 
 			-webkit-transition: -webkit-transform 0.3s linear;
@@ -24,11 +24,11 @@ body{
 
 	&.tablet{
 		.off-canvas-left {
-			width:40%;
-			left:-10%;
+			width:40% !important;
+			left:-10% !important;
 		}
 		.in-canvas-left-active {
-			left:40%;
+			left:40% !important;
 		}
 		.pushRightContentForMenu { 
 			-webkit-transition: -webkit-transform 0.3s linear;
@@ -60,26 +60,5 @@ body{
 			-webkit-transition: -webkit-transform 0.3s linear;
 			-webkit-transform: rotateY(180deg);
 		}
-	}
-
-	.off-canvas-left {
-		float: left;
-		position: fixed;
-		border-right: 1px solid #d1d1d1;
-		z-index: 1;
-		box-sizing:border-box;
-	}
-	.off-canvas-left-active {
-		left: 0 !important;
-	}
-
-	.in-canvas {
-		margin-top:0em;
-		width:100%;
-		background: grey;
-		float: left;
-		position:fixed;
-		left:0px;
-		z-index:2;
 	}
 }

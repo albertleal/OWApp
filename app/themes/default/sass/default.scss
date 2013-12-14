@@ -42,6 +42,16 @@ body{
 		opacity: 1;
 
 		#leftLayer{
+			&.off-canvas-left {
+				float: left;
+				position: fixed;
+				border-right: 1px solid #d1d1d1;
+				z-index: 1;
+				box-sizing:border-box;
+			}
+			&.off-canvas-left-active {
+				left: 0 !important;
+			}
 			ul#menu{
 				padding:0;
 				margin:0;
@@ -81,7 +91,15 @@ body{
 		}
 		#centerLayer{
 			box-shadow: -2px 0px 16px rgba(50,50,50,0.3);
-
+			&.in-canvas {
+				margin-top:0em;
+				width:100%;
+				background: grey;
+				float: left;
+				position:fixed;
+				left:0px;
+				z-index:2;
+			}
 			#header{
 				height: 65px;
 				width: 100%;
