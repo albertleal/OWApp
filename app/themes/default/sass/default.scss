@@ -125,10 +125,17 @@ body{
 					box-sizing: border-box;
 				}
 			}
+			.alert{
+				display: none;
+			}
 			#operationContent{
-				padding: 0 15px;
+				width: 100%;
+				padding: 0 0 0 15px;
 				float:left;
 				background:$color_operationContent;
+				.first{
+					margin-top:30px;
+				}
 			}
 			#footer {
 				height: 45px;

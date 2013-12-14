@@ -1,4 +1,4 @@
-$time_menu_animation: 0.3s;
+$time_menu_animation: 1s;
 
 body{
 
@@ -12,11 +12,11 @@ body{
 			left:80% !important;
 		}
 		.pushRightContentForMenu { 
-			-webkit-transition: -webkit-transform 0.3s linear;
+			-webkit-transition: -webkit-transform 1s linear;
 			-webkit-transform: translateX(80%);
 		}
 		.pushLeftContentForMenu { 
-			-webkit-transition: -webkit-transform 0.3s linear;
+			-webkit-transition: -webkit-transform 1s linear;
 			-webkit-transform: translateX(-80%);
 		}
 	} 
@@ -31,33 +31,33 @@ body{
 			left:40% !important;
 		}
 		.pushRightContentForMenu { 
-			-webkit-transition: -webkit-transform 0.3s linear;
+			-webkit-transition: -webkit-transform 1s linear;
 			-webkit-transform: translateX(40%);
 		}
 		.pushLeftContentForMenu { 
-			-webkit-transition: -webkit-transform 0.3s linear;
+			-webkit-transition: -webkit-transform 1s linear;
 			-webkit-transform: translateX(-40%);
 		}
 	}	
 
 
 	.pushRightMenu{ 
-			-webkit-transition: -webkit-transform 0.3s linear;
+			-webkit-transition: -webkit-transform 1s linear;
 			-webkit-transform: translateX(25%);
 	}
 	.pushLeftMenu{ 
-		-webkit-transition: -webkit-transform 0.3s linear;
+		-webkit-transition: -webkit-transform 1s linear;
 		-webkit-transform: translateX(-25%);
 	}
 
 
 	#header{
 		#displayLeftPanel{
-			-webkit-transition: -webkit-transform 0.3s linear;
+			-webkit-transition: -webkit-transform 1s linear;
 			-webkit-transform: rotateY(0deg);
 		}
 		#displayLeftPanel.ui-state-active{
-			-webkit-transition: -webkit-transform 0.3s linear;
+			-webkit-transition: -webkit-transform 1s linear;
 			-webkit-transform: rotateY(180deg);
 		}
 	}
