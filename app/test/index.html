@@ -123,6 +123,9 @@ Fusce sagittis cursus nisl id aliquet. Proin cursus justo non cursus pellentesqu
 			if($('.in-canvas').hasClass('in-canvas-left-active')){
 				$('#operationContent').removeClass('no-touch');
 				$('#footer').removeClass('no-touch');
+				
+				$('#operationContent').addClass('scrollable');
+				$('#menu').removeClass("scrollable");
 
 				$('.in-canvas').addClass('pushLeftContentForMenu');
 				$('.off-canvas-left').addClass('pushLeftMenu');	
@@ -137,6 +140,9 @@ Fusce sagittis cursus nisl id aliquet. Proin cursus justo non cursus pellentesqu
 				$('#menu').scrollTop(0);
 				$('#operationContent').addClass('no-touch');
 				$('#footer').addClass('no-touch');
+				
+				$('#operationContent').removeClass('scrollable');
+				$('#menu').addClass("scrollable");
 
 				$('.in-canvas').addClass('pushRightContentForMenu');
 				$('.off-canvas-left').addClass('pushRightMenu');
@@ -179,8 +185,6 @@ Fusce sagittis cursus nisl id aliquet. Proin cursus justo non cursus pellentesqu
 				if ( $('#leftLayer').hasClass('off-canvas-left-active') ) { //active menu
 					if (event.gesture.direction == 'left') { //swipe left
 						//alert('LEFT!');
-						$('#operationContent').addClass('scrollable');
-						$('#menu').removeClass("scrollable");
 						showLeftMenu();
 					}					
 				}else{
@@ -188,8 +192,6 @@ Fusce sagittis cursus nisl id aliquet. Proin cursus justo non cursus pellentesqu
 					if (event.gesture.startEvent.center.pageX < tanto) { //did gesture start in
 						if (event.gesture.direction == 'right') { //swipe right
 							//alert('RIGHT!');
-							$('#operationContent').removeClass('scrollable');
-							$('#menu').addClass("scrollable");
 							showLeftMenu();
 						}
 					}else{ //out of menu zone

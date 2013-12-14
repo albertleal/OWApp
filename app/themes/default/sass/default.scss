@@ -22,11 +22,12 @@ body{
 		margin: 0 !important;
 	}
 	.scrollable{
-		overflow: scroll; 
+		overflow-y: auto; 
 		-webkit-overflow-scrolling: touch;
 	}
 	.no-touch{
 		pointer-events: none;
+		overflow: hidden;
 		//-webkit-filter:blur(0.1em);
 	}
 	.canvas .canvas-content{
@@ -107,7 +108,7 @@ body{
 				}
 			}
 			#operationContent{
-				padding: 0 1em;
+				padding: 0 15px;
 				float:left;
 				background:$color_operationContent;
 			}
