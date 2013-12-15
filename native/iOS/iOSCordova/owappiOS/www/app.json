@@ -1,0 +1,82 @@
+{
+	App:"my OWAPP first App",
+	theme:"default",
+	languages:{
+		"es-ES" :"Spanish",
+		"ca_ES" :"Spanish",
+		"en-US" :"English",
+	},
+	platforms:{
+		"web" :{
+			"chrome",
+			"safari",
+			"firefox",
+		}.
+		
+	},
+	plugins:{
+		"OWABridge",
+		"OWASession",
+		"OWAStorage"
+	},
+	globalCallBacks:{
+		"globalCallBack1"
+	},
+	globalmodels:{
+		"globalModel1",
+		"globalModel2"
+	},
+	globalCollection:{
+		"globalCollection1":{
+			withModels:{
+				"globalModel1"
+			}
+		},
+		"globalModel2":{
+			withModels:{
+				"globalModel2"
+			}	
+		}
+	},
+	actions:{
+		"action1" : {
+			View:{
+				"Vista1"{
+					template: "template1"
+				}
+			}
+		}
+		"action2" : {
+			View:{
+				"Vista1"{
+					template: "template1"
+				},
+				"Vista2"{
+					template: "template1"
+				}
+			},
+			CallBacks:{
+				"CallBack1"
+			},
+			Models:{
+				"model1",
+				"model2"
+			},
+			Collection:{
+				"collection1": {
+					withModels:{
+						"model1",
+						"model2"
+					}
+				}
+			}
+		}
+		"action1" : {
+			View:{
+				"Vista1"{
+					template: "template1"
+				}
+			}
+		}
+	}
+}
