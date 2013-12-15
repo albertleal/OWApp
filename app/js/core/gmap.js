@@ -10,7 +10,7 @@ function goLocation(idMap){
   var infowindow = new google.maps.InfoWindow({
     map: map,
     position: pos,
-    content: 'You are here!'
+    content: '<p>You are here!</p>'
   });
 
   	map.setCenter(pos);
@@ -35,7 +35,7 @@ function geoLocate(idMap){
       var infowindow = new google.maps.InfoWindow({
         map: map,
         position: pos,
-        content: 'You are here! Thanks HTML5!'
+        content: '<p>You are here! Thanks HTML5!</p>'
       });
 
       map.setCenter(pos);
@@ -74,7 +74,7 @@ function addLocations(map){
 
 		icon = "../../../owapp.png";
 
-		html = "Localizacion prueba";
+		html = "<h3>Localizacion</h3><p>Cuerpo localizacion</p>";
 
 		markers[0] = new google.maps.LatLng(41.40914,2.20855);
 		markers[1] = new google.maps.LatLng(41.40867,2.20968);
