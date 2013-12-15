@@ -98,7 +98,9 @@
 			</div>
 			<div class="alert alert-dismissable"><button type="button" class="close" aria-hidden="true">&times;</button><span id="alertText"></span></div>
 			<div class="scrollable" id="operationContent">
-				
+				<div class="oldPage"></div>
+				<div class="currentPage"></div>
+				<div class="newPage"></div>
 			</div>
 			<div id="footer">hola footer</div>
 		</div>
@@ -156,7 +158,7 @@
 			//Force scroll on scrollable class
 			$('.scrollable').on('touchmove', function(e){
 				//alert('scroll');
-				e.stopImmediatePropagation();
+				e.stopPropagation();
 			});
 			$( window ).resize(function() {
 				resizeInterface();
@@ -206,7 +208,7 @@
 				$('.alert').hide();
 			});
 			//fake navigation 
-			loadView('first-view');
+			loadView('first-view',null,'currentPage');
 		});
 
 		function resizeInterface(){
@@ -226,19 +228,47 @@
 			$('#menu').height(windowHeight-parseInt($('.canvas-content').css('padding-top').replace('px','')));
 			$('#operationContent').height(windowHeight-headerHeight-footerHeight);
 		};
-
-		function loadView(view){
+		var navigationStack=[];
+		function loadView(view, fromView,container){
+			if(view == null){
+				view = navigationStack[navigationStack.length -2];
+			}
 			$.ajax({
 			  url: view+".html",
 			  cache: false
 			}).done(function( html ) {
-				$('#operationContent').html('');
-			    $('#operationContent').append( html );
+				console.log(container);
+				//$('#operationContent').html('');
+				switch(container){
+					case 'oldPage':
+						navigationStack.pop(fromView);
+						$('.oldPage').append( html );
+						$('.currentPage').addClass('movePageLeft');
+						$('.currentPage').remove();
+						$('.oldPage').addClass('currentPage').removeClass('oldPage');
+						$('.currentPage').after('<div class="oldPage"></div>');
+						break;
+					case 'currentPage':
+						navigationStack.push(view);
+						$('.currentPage').append( html );
+						break;
+					case 'newPage':
+						navigationStack.push(view);
+						$('.newPage').append( html );
+						$('.currentPage').addClass('movePageRight');
+						$('.currentPage').remove();
+						$('.newPage').addClass('currentPage').removeClass('newPage');
+						$('.currentPage').after('<div class="newPage"></div>');
+						break;
+				}
+
+
 			}).fail(function() {
     			$('#alertText').html('Error cargando la página');
     			$('.alert').addClass('alert-danger');
     			$('.alert').show();
   			});
+  			console.log(navigationStack);
 		}
 	</script>
 </body>
