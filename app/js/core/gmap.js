@@ -13,9 +13,9 @@ function goLocation(idMap){
     content: '<p>You are here!</p>'
   });
 
-  	map.setCenter(pos);
-    
-   addLocations(map);
+  map.setCenter(pos);
+
+  addLocations(map);
 }
 
 function geoLocate(idMap){
@@ -81,6 +81,8 @@ function addLocations(map){
 		markers[2] = new google.maps.LatLng(41.40791,2.20763);
 		markers[3] = new google.maps.LatLng(41.40797,2.20890);
 
+		var bounds = new google.maps.LatLngBounds ();
+
 		for (var i = markers.length - 1; i >= 0; i--) {
 			marker = new google.maps.Marker({
 				position: markers[i],
@@ -88,6 +90,8 @@ function addLocations(map){
 				map: map,
 				html: html
 			});
+
+			bounds.extend(markers[i]);
 
 			infowindow = new google.maps.InfoWindow({
 				content: 'Empty'
@@ -98,5 +102,6 @@ function addLocations(map){
 	        infowindow.open(map, this);    
 	        });
 		};
+		map.fitBounds(bounds);
 
 }
