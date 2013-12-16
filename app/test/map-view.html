@@ -1,12 +1,11 @@
 <div class="container-full">
   <div class="row">
     <div class="col-xs-12 col-md-6">
-      <select class="form-control">
-      <option value="0">Sin filtro</option>
-      <option value="1">Bares y restaurantes</option>
-      <option value="2">Hoteles y similares</option>
-      <option value="3">Shopping</option>
-      <option value="4">Alimentación</option>
+      <select id="categoriesMap" class="form-control">
+      <option value="0">Todos</option>
+      <option value="1">Restauracion</option>
+      <option value="2">Shopping</option>
+      <option value="999">Otros</option>
       </select>
     </div>
 
@@ -40,14 +39,32 @@
 
 <script type="text/javascript">
 
+var map;
+var markers;
+var tmpmarkers;
+
 function loadMap(){
 
-  geoLocate("map_canvas");
+  map = createMap("map_canvas");
+  markers = testMarkers();
+  assignEvents(map,markers);
+  tmpmarkers = markers;
+  geoLocate(map);
+  addLocations(map,tmpmarkers);
 
 }
+$('#categoriesMap').on('change', function(){
+  clearLocations(tmpmarkers);
+  tmpmarkers = markers;
+  clearLocations(tmpmarkers);
+  tmpmarkers = filterMarkers(this,markers);
+  addLocations(map,tmpmarkers);
+  centerMap(map,tmpmarkers);
+
+});
 
 $("#goButton").on("click", function(){
-  goLocation("map_canvas");
+  goLocation(map);
 });
 
 </script>

@@ -1,30 +1,54 @@
-function goLocation(idMap){
-	  var mapOptions = {
+function marker (marker,category) {//marker object
+    this.marker = marker;
+    this.category = typeof category !== 'undefined' ? category : 999;
+}
+
+function createMap(idMap) {
+  //console.log('Crear mapa');
+  var mapOptions = {
     zoom: 18
   };
-    map = new google.maps.Map(document.getElementById(idMap),
-      mapOptions);
+
+  map = new google.maps.Map(document.getElementById(idMap),mapOptions);
+  return map;
+}
+
+function filterMarkers(element,markers) {
+  
+  //console.log('Filter markers');
+  toShow = [];
+  if (element.value!=0) {
+    for (var i = markers.length - 1; i >= 0; i--) {
+      if(markers[i].category==element.value) {
+        toShow.push(markers[i]);
+      }
+    }
+  }else {
+    toShow = markers;
+  }
+
+  return toShow;
+}
+
+function goLocation(map) {
+
+  //console.log('goLocation');
 
   var pos = new google.maps.LatLng(41.40843,2.20827);
 
   var infowindow = new google.maps.InfoWindow({
     map: map,
     position: pos,
-    content: '<p>You are here!</p>'
+    content: '<p>Location searched</p>'
   });
 
   map.setCenter(pos);
 
-  addLocations(map);
 }
 
-function geoLocate(idMap){
+function geoLocate(map) {
 
-  var mapOptions = {
-    zoom: 18
-  };
-    map = new google.maps.Map(document.getElementById(idMap),
-      mapOptions);
+  //console.log('Geolocate');
 
   // Try HTML5 geolocation
   if(navigator.geolocation) {
@@ -46,11 +70,11 @@ function geoLocate(idMap){
     // Browser doesn't support Geolocation
     handleNoGeolocation(false, map);
   }
-   addLocations(map);
-
 }
 
 function handleNoGeolocation(errorFlag, map) {
+
+  //console.log('handleNoGeolocation');
 
   if (errorFlag) {
     var content = 'Error: The Geolocation service failed.';
@@ -68,40 +92,118 @@ function handleNoGeolocation(errorFlag, map) {
 
 }
 
-function addLocations(map){
+function addLocations(map,markers) {
 
-		markers = new Array();
+  //console.log('addLocations');
 
-		icon = "../../../owapp.png";
+	for (var i = markers.length - 1; i >= 0; i--) {
+		
+		markers[i].marker.setMap(map);
 
-		html = "<h3>Localizacion</h3><p>Cuerpo localizacion</p>";
+		infowindow = new google.maps.InfoWindow({
+			content: 'Empty'
+		});
+	};
+}
 
-		markers[0] = new google.maps.LatLng(41.40914,2.20855);
-		markers[1] = new google.maps.LatLng(41.40867,2.20968);
-		markers[2] = new google.maps.LatLng(41.40791,2.20763);
-		markers[3] = new google.maps.LatLng(41.40797,2.20890);
+function centerMap(map,markers) {
 
-		var bounds = new google.maps.LatLngBounds ();
+  //console.log('centerMap');
+  
+  var bounds = new google.maps.LatLngBounds();
 
-		for (var i = markers.length - 1; i >= 0; i--) {
-			marker = new google.maps.Marker({
-				position: markers[i],
-				icon: icon,
-				map: map,
-				html: html
-			});
+  for (var i = markers.length - 1; i >= 0; i--) {
+    bounds.extend(markers[i].marker.position);
+  };
+  map.fitBounds(bounds);
+}
 
-			bounds.extend(markers[i]);
+function clearLocations(markers) {
+  //console.log('clearLocations');
+  for (var i = markers.length - 1; i >= 0; i--) {
+    markers[i].marker.setMap(null);
+  }
+}
 
-			infowindow = new google.maps.InfoWindow({
-				content: 'Empty'
-			});
+function assignEvents(map,markers) {
+  for (var i = markers.length - 1; i >= 0; i--) {
+    google.maps.event.addListener(markers[i].marker, 'click', function() {
+      infowindow.setContent(this.html);
+      infowindow.open(map, this);
+    });
+  };
+}
 
-		   google.maps.event.addListener(marker, 'click', function() {
-	        infowindow.setContent(this.html);
-	        infowindow.open(map, this);    
-	        });
-		};
-		map.fitBounds(bounds);
+function testMarkers() {
 
+    markers = new Array();
+
+    icon = "../../../owapp.png";
+
+    html = "<h3>Localizacion</h3><p>Cuerpo localizacion</p>";
+
+    position = new google.maps.LatLng(41.40867,2.20968);
+    toAdd = new google.maps.Marker({
+        position: position,
+        icon: icon,
+        html: html
+    });
+    tmp = new marker(toAdd,1);
+    markers.push(tmp);
+
+    position = new google.maps.LatLng(41.40791,2.20763);
+    toAdd = new google.maps.Marker({
+        position: position,
+        icon: icon,
+        html: html
+    });
+    tmp = new marker(toAdd,1);
+    markers.push(tmp);
+
+    position = new google.maps.LatLng(41.40797,2.20890);
+    toAdd = new google.maps.Marker({
+        position: position,
+        icon: icon,
+        html: html
+    });
+    tmp = new marker(toAdd,2);
+    markers.push(tmp);
+
+    position = new google.maps.LatLng(41.40949,2.20625);
+    toAdd = new google.maps.Marker({
+        position: position,
+        icon: icon,
+        html: html
+    });
+    tmp = new marker(toAdd,2);
+    markers.push(tmp);
+
+    position = new google.maps.LatLng(41.40862,2.20515);
+    toAdd = new google.maps.Marker({
+        position: position,
+        icon: icon,
+        html: html
+    });
+    tmp = new marker(toAdd,2);
+    markers.push(tmp);
+
+    position = new google.maps.LatLng(41.40753,2.20587);
+    toAdd = new google.maps.Marker({
+        position: position,
+        icon: icon,
+        html: html
+    });
+    tmp = new marker(toAdd);
+    markers.push(tmp);
+
+    position = new google.maps.LatLng(41.40711,2.20660);
+    toAdd = new google.maps.Marker({
+        position: position,
+        icon: icon,
+        html: html
+    });
+    tmp = new marker(toAdd);
+    markers.push(tmp);
+
+    return markers;
 }
