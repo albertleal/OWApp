@@ -1,6 +1,0 @@
-CACHE MANIFEST
-require-2.1.9.min.js
-NETWORK:
-*
-FALLBACK:
-/html/ /offline.html
