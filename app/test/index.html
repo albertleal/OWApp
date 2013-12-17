@@ -225,13 +225,13 @@
 						$('.oldPage').append( html );
 						$('.currentPage').addClass('movePageLeft');
 						$('.oldPage').addClass('movePageLeft');
-						setTimeout(function(){
+						// setTimeout(function(){
 							$('.currentPage').removeClass('movePageLeft');
 							$('.oldPage').removeClass('movePageLeft');
 							$('.currentPage').remove();
 							$('.oldPage').addClass('currentPage').removeClass('oldPage');
-							$('.currentPage').after('<div class="oldPage"></div>');
-						},300);
+							$('.currentPage').before('<div class="oldPage"></div>');
+						// },300);
 						break;
 					case 'currentPage':
 						navigationStack.push(view);
@@ -243,13 +243,13 @@
 						$('.newPage').append( html );
 						$('.currentPage').addClass('movePageRight');
 						$('.newPage').addClass('movePageRight');
-						setTimeout(function(){
+						// setTimeout(function(){
 							$('.currentPage').removeClass('movePageRight');
 							$('.newPage').removeClass('movePageRight');
 							$('.currentPage').remove();
 							$('.newPage').addClass('currentPage').removeClass('newPage');
 							$('.currentPage').after('<div class="newPage"></div>');
-						},300);
+						// },300);
 						
 						break;
 				}
