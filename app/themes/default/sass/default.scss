@@ -7,7 +7,7 @@ body{
 	left:200px;
 	margin: 0px;
 	background: url(../images/background_tweed.png) repeat;
-	background: white;
+	//background: white;
 	//background: url('../images/test.png') no-repeat;
 	font-size:22px;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
@@ -21,6 +21,10 @@ body{
 	p, h3 {
 		margin: 0 !important;
 	}
+	p{
+		text-align:justify;
+		margin:1em 0 1em 0 !important;
+	}
 	.scrollable{
 		overflow-y: auto; 
 		-webkit-overflow-scrolling: touch;
@@ -30,9 +34,13 @@ body{
 		overflow: hidden;
 		//-webkit-filter:blur(0.1em);
 	}
-	.canvas .canvas-content{
-		-webkit-transform: translateY(0);
-		padding-top:20px;
+	.canvas{
+		display: none;
+		.canvas-content{
+			-webkit-transform: translateY(0);
+			//padding-top:20px;
+			padding-top: 61px;
+		}
 	}
 
 	#container{
@@ -42,6 +50,7 @@ body{
 		opacity: 1;
 
 		#leftLayer{
+			//-webkit-filter:blur(0.1em);
 			&.off-canvas-left {
 				float: left;
 				position: fixed;
@@ -51,12 +60,13 @@ body{
 			}
 			&.off-canvas-left-active {
 				left: 0 !important;
+				//-webkit-filter:blur(0);
 			}
 			ul#menu{
 				padding:0;
 				margin:0;
 				list-style: none;
-				background: white;
+				//background: white;
 				padding-left: 15px;
 				padding-right: 15px;
 				li.menu-element{
@@ -64,14 +74,60 @@ body{
 					height: 44px;
 					clear: both;
 					margin-bottom: 4px;
+					margin-top: 2px;
+					margin-left: 3px;
+					&:active{
+						opacity: 0.1;
+					}
+					&.home-item{
+						.icon{
+							background: #F5F5F5	url(../images/icons/802-dog-house@2x.png) center no-repeat;
+							background-size: 24px;
+						}
+					}
+					&.map-item{
+						.icon{
+							background: #F5F5F5	url(../images/icons/852-map@2x.png) center no-repeat;
+							background-size: 24px;
+						}
+					}
+					&.camera-item{
+						.icon{
+							background: #F5F5F5	url(../images/icons/714-camera@2x.png) center no-repeat;
+							background-size: 24px;
+						}
+					}
+					&.graphic-item{
+						.icon{
+							background: #F5F5F5	url(../images/icons/858-line-chart@2x.png) center no-repeat;
+							background-size: 24px;
+						}
+					}
+					&.money-item{
+						.icon{
+							background: #F5F5F5	url(../images/icons/827-money-2@2x.png) center no-repeat;
+							background-size: 24px;
+						}
+					}
+					&.user-item{
+						.icon{
+							background: #F5F5F5	url(../images/icons/769-male@2x.png) center no-repeat;
+							background-size: 24px;
+						}
+					}
+					&.configuration-item{
+						.icon{
+							background: #F5F5F5	url(../images/icons/740-gear@2x.png) center no-repeat;
+							background-size: 24px;
+						}
+					}
 					.icon{
 						width: 40px;
 						min-height: 40px;
-						background: #F5F5F5	url(../images/icons/769-male@2x.png) center no-repeat;
 						float: left;
 						border-radius: 2em;
-						background-size: 46px;
 					}
+					
 					.content{
 						vertical-align: middle;
 						border-bottom: 1px solid #F5F5F5;
@@ -85,12 +141,14 @@ body{
 						overflow: hidden;
 						white-space: nowrap;
 						word-wrap: normal;
+
+						color: white;
 					}
 				}
 			}
 		}
 		#centerLayer{
-			box-shadow: -2px 0px 16px rgba(50,50,50,0.3);
+			box-shadow: -2px 0px 16px rgba(50,50,50,1);
 			&.in-canvas {
 				margin-top:0em;
 				width:100%;
@@ -130,7 +188,7 @@ body{
 			}
 			#operationContent{
 				width: 100%;
-				padding: 0 0 0 15px;
+				padding: 0 15px 0 15px;
 				float:left;
 				background:$color_operationContent;
 				.first{
@@ -147,6 +205,49 @@ body{
 				background: $color_header;
 				border-top: 1px solid $color_header_border;
 				box-sizing:border-box;
+				ul.footer-elements{
+					list-style: none;
+					width: 100%;
+					padding: 0.2em 0 0 0;
+					li.footer-element{
+						float:left;
+						width:33.33%;
+						.icon{
+							height: 25px;
+						}
+						.content{
+							text-align: center;
+							font-size: 0.8em;
+							color:black;
+						}
+						&:active{
+							opacity: 0.1;
+						}
+						.active{
+							.content{
+								color:blue;
+							}
+						}
+						&.option1{
+							.icon{
+								background: url(../images/icons/notused/851-calendar@2x.png) center no-repeat;
+								background-size: 24px;
+							}
+						}
+						&.option2{
+							.icon{
+								background: url(../images/icons/notused/815-car@2x.png) center no-repeat;
+								background-size: 24px;
+							}
+						}
+						&.option3{
+							.icon{
+								background: url(../images/icons/notused/762-shopping-bag@2x.png) center no-repeat;
+								background-size: 24px;
+							}
+						}
+					}
+				}
 			}
 
 		}

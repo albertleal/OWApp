@@ -20,7 +20,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     NSString *stringURL = [NSString stringWithFormat:@"http://albertleal.com/apps/owapp/test/index.html"];
     
-    //stringURL = [NSString stringWithFormat:@"http://192.168.1.100:8888/test/index.html"];
+    stringURL = [NSString stringWithFormat:@"http://192.168.1.100:8888/test/index.html"];
     
     
     NSURL *url = [NSURL URLWithString:stringURL];

@@ -14,77 +14,33 @@
 		<div id="leftLayer" class="canvas off-canvas-left">
 			<div class="canvas-content">
 				<ul id="menu" class="canvas scrollable">
-					<li class="menu-element">
+					<li class="menu-element home-item" onclick="javascript:loadViewFromMenu(event,'first-view')">
 						<div class="icon"></div>
-						<div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+						<div class="content">Home</div>
 					</li>
-					<li class="menu-element">
+					<li class="menu-element map-item" onclick="javascript:loadViewFromMenu(event,'map-view')">
 						<div class="icon"></div>
-						<div class="content">test 2</div>
+						<div class="content">Mapa</div>
 					</li>
-					<li class="menu-element">
+					<li class="menu-element camera-item" onclick="javascript:loadViewFromMenu(event,'second-view')">
 						<div class="icon"></div>
-						<div class="content">test 3</div>
+						<div class="content">Camara (Texto full)</div>
 					</li>
-					<li class="menu-element">
+					<li class="menu-element graphic-item" onclick="javascript:loadViewFromMenu(event,'third-view')">
 						<div class="icon"></div>
-						<div class="content">test 4</div>
+						<div class="content">Graficos (imagen)</div>
 					</li>
-					<li class="menu-element">
+					<li class="menu-element money-item">
 						<div class="icon"></div>
-						<div class="content">test 5</div>
+						<div class="content">Cuentas</div>
 					</li>
-					<li class="menu-element">
+					<li class="menu-element user-item">
 						<div class="icon"></div>
-						<div class="content">test 6</div>
+						<div class="content">Usuario</div>
 					</li>
-					<li class="menu-element">
+					<li class="menu-element configuration-item">
 						<div class="icon"></div>
-						<div class="content">test 7</div>
-					</li>
-					<li class="menu-element">
-						<div class="icon"></div>
-						<div class="content">test 8</div>
-					</li>
-					<li class="menu-element">
-						<div class="icon"></div>
-						<div class="content">test 9</div>
-					</li>
-					<li class="menu-element">
-						<div class="icon"></div>
-						<div class="content">test 10</div>
-					</li>
-					<li class="menu-element">
-						<div class="icon"></div>
-						<div class="content">test 11</div>
-					</li>
-					<li class="menu-element">
-						<div class="icon"></div>
-						<div class="content">test 12</div>
-					</li>
-					<li class="menu-element">
-						<div class="icon"></div>
-						<div class="content">test 13</div>
-					</li>
-					<li class="menu-element">
-						<div class="icon"></div>
-						<div class="content">test 14</div>
-					</li>
-					<li class="menu-element">
-						<div class="icon"></div>
-						<div class="content">test 15</div>
-					</li>
-					<li class="menu-element">
-						<div class="icon"></div>
-						<div class="content">test 16</div>
-					</li>
-					<li class="menu-element">
-						<div class="icon"></div>
-						<div class="content">test 17</div>
-					</li>
-					<li class="menu-element">
-						<div class="icon"></div>
-						<div class="content">test 18</div>
+						<div class="content">Configuración</div>
 					</li>
 				</ul>
 			</div>
@@ -102,12 +58,21 @@
 				<div class="currentPage"></div>
 				<div class="newPage"></div>
 			</div>
-			<div id="footer">hola footer</div>
-		</div>
-		<div id="rightLayer" class="canvas off-canvas-right">
-			<div class="canvas-content">
-				RIGHT
-				<a href="javascript:toogleOffCanvasRight();">toogleOffCanvasRight</a>
+			<div id="footer">
+				<ul class="footer-elements">
+					<li class="footer-element option1">
+						<div class="icon"></div>
+						<div class="content">Calendario</div>
+					</li>
+					<li class="footer-element option2">
+						<div class="icon"></div>
+						<div class="content">Vehículos</div>
+					</li>
+					<li class="footer-element option3">
+						<div class="icon"></div>
+						<div class="content">Compras</div>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -132,7 +97,7 @@
 					$('.off-canvas-left').removeClass('off-canvas-left-active');
 					$('.in-canvas').removeClass('pushLeftContentForMenu');
 					$('.off-canvas-left').removeClass('pushLeftMenu');
-				},3000);
+				},300);
 			}else{
 				$('#menu').scrollTop(0);
 				$('#operationContent').addClass('no-touch');
@@ -149,7 +114,7 @@
 					$('.off-canvas-left').removeClass('pushRightMenu');
 					$('.in-canvas').addClass('in-canvas-left-active');
 					$('.off-canvas-left').addClass('off-canvas-left-active');
-				},3000);
+				},300);
 			}
 		}
 		$(document).ready(function() {
@@ -166,7 +131,7 @@
 			window.addEventListener("orientationchange", function() {
 				resizeInterface();
 			}, false);
-			resizeInterface();
+
 			$('#displayLeftPanel').on('click',function(){
 				showLeftMenu();
 			});
@@ -209,6 +174,12 @@
 			});
 			//fake navigation 
 			loadView('first-view',null,'currentPage');
+			setTimeout(function(){
+				$('.canvas').show();
+			},300);
+			
+
+
 		});
 
 		function resizeInterface(){
@@ -229,6 +200,15 @@
 			$('#operationContent').height(windowHeight-headerHeight-footerHeight);
 		};
 		var navigationStack=[];
+		function loadViewFromMenu(event, view){
+			$(event.target.parentElement).addClass('active');
+			setTimeout(function(){
+				$(event.target.parentElement).removeClass('active');
+			},300);
+			console.log(event.target);
+			loadView(view,null,"currentPage");
+			showLeftMenu();
+		}
 		function loadView(view, fromView,container){
 			if(view == null){
 				view = navigationStack[navigationStack.length -2];
@@ -244,23 +224,37 @@
 						navigationStack.pop(fromView);
 						$('.oldPage').append( html );
 						$('.currentPage').addClass('movePageLeft');
-						$('.currentPage').remove();
-						$('.oldPage').addClass('currentPage').removeClass('oldPage');
-						$('.currentPage').after('<div class="oldPage"></div>');
+						$('.oldPage').addClass('movePageLeft');
+						setTimeout(function(){
+							$('.currentPage').removeClass('movePageLeft');
+							$('.oldPage').removeClass('movePageLeft');
+							$('.currentPage').remove();
+							$('.oldPage').addClass('currentPage').removeClass('oldPage');
+							$('.currentPage').after('<div class="oldPage"></div>');
+						},300);
 						break;
 					case 'currentPage':
 						navigationStack.push(view);
+						$('.currentPage').html('');
 						$('.currentPage').append( html );
 						break;
 					case 'newPage':
 						navigationStack.push(view);
 						$('.newPage').append( html );
 						$('.currentPage').addClass('movePageRight');
-						$('.currentPage').remove();
-						$('.newPage').addClass('currentPage').removeClass('newPage');
-						$('.currentPage').after('<div class="newPage"></div>');
+						$('.newPage').addClass('movePageRight');
+						setTimeout(function(){
+							$('.currentPage').removeClass('movePageRight');
+							$('.newPage').removeClass('movePageRight');
+							$('.currentPage').remove();
+							$('.newPage').addClass('currentPage').removeClass('newPage');
+							$('.currentPage').after('<div class="newPage"></div>');
+						},300);
+						
 						break;
 				}
+				resizeInterface();
+
 
 
 			}).fail(function() {
@@ -269,6 +263,12 @@
     			$('.alert').show();
   			});
   			console.log(navigationStack);
+		}
+		function backButton(){
+
+		}
+		function homeButton(){
+
 		}
 	</script>
 </body>
