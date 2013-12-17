@@ -11,7 +11,7 @@
 
     <div class="col-xs-12 col-md-6">
       <div class="input-group">
-        <input type="text" class="form-control"value="Diagonal 67, Barcelona">
+        <input id="goText" type="text" class="form-control">
         <span class="input-group-btn">
           <button id="goButton" class="btn btn-default" type="button">Ir</button>
         </span>
@@ -64,7 +64,7 @@ $('#categoriesMap').on('change', function(){
 });
 
 $("#goButton").on("click", function(){
-  goLocation(map);
+  goLocation(map,$("#goText").val());
 });
 
 </script>

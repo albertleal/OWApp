@@ -30,19 +30,30 @@ function filterMarkers(element,markers) {
   return toShow;
 }
 
-function goLocation(map) {
+function goLocation(map, cadena) {
 
-  //console.log('goLocation');
+  console.log('goLocation');
 
-  var pos = new google.maps.LatLng(41.40843,2.20827);
+  //var pos = new google.maps.LatLng(41.40843,2.20827);
+  var geocoder;
 
-  var infowindow = new google.maps.InfoWindow({
-    map: map,
-    position: pos,
-    content: '<p>Location searched</p>'
+  geocoder = new google.maps.Geocoder();
+
+  geocoder.geocode( { 'address': cadena}, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      pos = results[0].geometry.location;
+      var infowindow = new google.maps.InfoWindow({
+        map: map,
+        position: pos,
+        content: '<p>Location searched</p>'
+      });
+
+      map.setCenter(pos);
+
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
   });
-
-  map.setCenter(pos);
 
 }
 
